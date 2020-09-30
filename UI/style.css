@@ -1,0 +1,36 @@
+*{
+    scroll-behavior: smooth;
+}
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+}
+
+#img-logo{
+    width: 200px;
+}
+
+#form form{
+    align-self: center;
+    padding: 20px;
+}
+
+#form button, #form input{
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px, solid, #C4C4C4;
+
+}
+
+#form input{
+    background-color: #C4C4C4;
+    border-radius: 15px;
+}
+
+#form button:hover{
+    background-color: rgb(97, 96, 96);
+    color: aliceblue;
+}
