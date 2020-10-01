@@ -1,10 +1,4 @@
-body,html{
-    margin:0;
-    padding: 0;
-}
-*{
-    box-sizing: border-box;
-}
+
 body{
     background-color: #EFEDED;
 }
@@ -25,13 +19,6 @@ body{
     border-radius: 30px;
     background: rgba(186, 182, 182, 0.54);  
 }
-.dot {
-    height: 25px;
-    width: 25px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-  }
 .books{
     background: #C4C4C4;
     margin:5%;
