@@ -18,24 +18,24 @@
     max-width: 90px;
 }
 
-#form form{
+#nav-form form{
     align-self: center;
     padding: 20px;
 }
 
-#form button, #form input{
+#nav-form button, #form input{
     padding: 5px;
     font-size: 1rem;
     border: 1px solid #C4C4C4;
 
 }
 
-#form input{
+#nav-form input{
     background-color: #eee;
     border-radius: 15px;
 }
 
-#form button:hover{
+#nav-form button:hover{
     background-color: #C4C4C4;
     color: black;
 }
@@ -71,13 +71,13 @@
   text-decoration: none;
   color: aliceblue;
 }
-#form {
+#nav-form {
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-#form a {
+#nav-form a {
   text-decoration: none;
   padding: 10px;
   align-self: center;
