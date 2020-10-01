@@ -23,7 +23,7 @@
     padding: 20px;
 }
 
-#nav-form button, #form input{
+#nav-form button, #nav-form input{
     padding: 5px;
     font-size: 1rem;
     border: 1px solid #C4C4C4;
@@ -191,11 +191,11 @@
     flex-direction: column;
   }
 
-  #form{
+  #nav-form{
     text-align: center;
   }
 
-  #form button{
+  #nav-form button{
     margin: 10px;
     padding: .4rem 1rem;
 
