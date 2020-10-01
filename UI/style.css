@@ -18,30 +18,32 @@
   max-width: 90px;
 }
 
-#form form {
-  align-self: center;
-  padding: 20px;
+#nav-form form{
+    align-self: center;
+    padding: 20px;
 }
 
-#form button,
-#form input {
-  padding: 5px;
-  font-size: 0.8rem;
-  border: 1px, solid, #c4c4c4;
+#nav-form button, #nav-form input{
+    padding: 5px;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 1px solid #eee;
+    color: #444;
+
 }
-#form button {
+#nav-form button{
   border-radius: 9px;
   padding: 7px 15px;
 }
 
-#form input {
-  background-color: #c4c4c4;
-  border-radius: 15px;
+#nav-form input{
+    background-color: #ddd;
+    border-radius: 15px;
 }
 
-#form button:hover {
-  background-color: rgb(97, 96, 96);
-  color: aliceblue;
+#nav-form button:hover{
+    background-color: #ddd;
+    color: black;
 }
 
 #navbar {
@@ -49,6 +51,8 @@
   background-color: #51adcf;
   display: flex;
   justify-content: space-around;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 #navbar ul {
@@ -69,20 +73,33 @@
 }
 #navbar ul li a {
   text-decoration: none;
-  color: aliceblue;
+  color: #eee;
 }
-#form {
+
+#navbar ul li:hover{
+  border-bottom: 1px solid #ddd;
+}
+
+#navbar ul li a:hover{
+  color: #444;
+}
+
+#nav-form {
   padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
 }
-#form a {
+#nav-form a {
   text-decoration: none;
   padding: 10px;
   align-self: center;
   font-size: 1.2rem;
-  color: aliceblue;
+  color: #eee;
+}
+
+#nav-form a:hover{
+  color: #444;
 }
 
 #home-section {
