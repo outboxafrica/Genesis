@@ -132,7 +132,6 @@
   height: 100vh;
 }
 
-<<<<<<< HEAD
 #wrapper{
   width: 90%;
   max-width: 700px;
@@ -255,4 +254,5 @@
 #books > img {
   width: 100%;
   height: auto;
+}
 }
