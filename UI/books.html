@@ -31,73 +31,198 @@
         </form>
       </div>
     </div>
-    <!--Category of books-->
+
+    <!--Category links-->
     <div class="category">
-      <div id="book-category">
-        <p>Technology</p>
-        <p>Science</p>
-        <p>Mathematics</p>
-      </div>
+      <button
+        class="tablinks"
+        id="defaultOpen"
+        onclick="openCategory(event, 'Technology')"
+      >
+        Technology
+      </button>
+      <button class="tablinks" onclick="openCategory(event, 'Science')">
+        Science
+      </button>
+      <button class="tablinks" onclick="openCategory(event, 'Mathematics')">
+        Mathematics
+      </button>
+      <button class="tablinks" onclick="openCategory(event, 'Psychology')">
+        Psychology
+      </button>
     </div>
 
     <!--The book centre-->
     <div class="books">
-      <div id="col-books">
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1576616569455-d2a9127ae8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="300px"
-          />
+      <div class="col-books">
+
+        <div id="Technology" class="tabcontent">
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1576616569455-d2a9127ae8c1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="300px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1568137223715-939ee931710e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
         </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1568137223715-939ee931710e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-          />
+
+
+        <div id="Science" class="tabcontent">
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1545239351-cefa43af60f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="300px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
         </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-          />
+
+
+
+        <div id="Mathematics" class="tabcontent">
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1565116175827-64847f972a3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="250px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1593193583588-66f1dcc0625b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="250px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
         </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1545239351-cefa43af60f3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="300px"
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1565116175827-64847f972a3f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="250px"
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1593193583588-66f1dcc0625b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="250px"
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1598618253208-d75408cee680?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="250px"
-          />
-        </div>
-        <div>
-          <img
-            src="https://images.unsplash.com/photo-1597045145058-222946a8412c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
-            width="200px"
-            height="250px"
-          />
+
+
+        <div id="Psychology" class="tabcontent">
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1598618253208-d75408cee680?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="250px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="container">
+              <img
+                src="https://images.unsplash.com/photo-1597045145058-222946a8412c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="200px"
+                height="250px"
+              />
+              <div class="middle">
+                <div class="text">Borrow</div>
+              </div>
+            </div>
+            <div class="btn">
+              <button class="delete" disabled>Remove</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
+    
+    <script>
+      function openCategory(event, category) {
+        // Declare all variables
+        var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+
+        // Get all elements with class="tablinks" and remove the class "active"
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+
+        // Show the current tab, and add an "active" class to the button that opened the tab
+        document.getElementById(category).style.display = "flex";
+        event.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
   </body>
 </html>
