@@ -130,6 +130,7 @@
 .featured-books {
   width: 100%;
   height: 600px;
+  background-color: #FFFBFB;
 }
 
 .books {
@@ -155,5 +156,23 @@
   width: 100%;
   height: 100px;
   background-color: #C4C4C4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  
+}
+.footer>div{
+  padding: 15px;
+}
 
+#media-icons img{
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 5px;
+  
+}
+.book-item>div{
+  padding: 40px 30px 20px 60px;
+  align-items: center;
 }
