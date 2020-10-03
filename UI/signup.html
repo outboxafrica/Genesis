@@ -4,36 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700">
-    <title>Sign Up</title>
+    <title>The Library</title>
 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <div class="signup-form">
-        <form >
+        <form>
             <div class="form-header">
                 <h2>Sign Up</h2>
                 <p>Fill out this form to sign up</p>
             </div>
             <div class="form-group">
+                <label for="username"><b>UserName</b></label>
+    <input type="text" id="Username" placeholder="Enter your name" name="username" required>
+            </div>
+            
+            <div class="form-group">
                 <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
             </div>
             <div class="form-group">
-                <label for="id"><b>id</b></label>
-    <input type="text" placeholder="Id" name="id" required>
+                <label for="register"><b>Register as:</b></label>
+
+                <select name="register" id="register">
+                <option value="EDU LF">EDU LF</option>
+                <option value="EDU Staff">EDU Staff</option>
+                <option value="EDU student">EDU student</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="id"><b>ID</b></label><br>
+    <input type="text" placeholder="ID" name="id" required>
             </div>
             <div class="form-group">
                 <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required> 
+                <input type="password" id="Password" placeholder="Enter Password" name="psw" required> 
             </div>
             <div class="form-group">
                 <label for="psw-repeat"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" required> 
+                <input type="password" placeholder="Confirm Password" name="psw-repeat" required> 
             </div>
             <div class="form-group">
                 <label>
-                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
                   </label> 
             </div>
             <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
@@ -44,5 +58,26 @@
             </div>  	
         </form>
     </div>
+
+    <!-- The following should be transferred to app.js -->
+
+    <script>
+        var usernameInput = document.getElementById('Username').value;
+        var passwordInput = document.getElementById('Password').value;
+
+        // Check browser support for local storage
+        if (typeof(Storage) !== "undefined") {
+        // Store data
+        localStorage.setItem("username", String(usernameInput));
+        localStorage.setItem("password", String(passwordInput));
+
+        // Retrieve
+         console.log(localStorage.getItem("username"));
+         console.log(localStorage.getItem("password"));
+
+        } else {
+        console.log("Sorry, your browser does not support Web Storage...");
+        }
+    </script>
 </body>
 </html>
