@@ -62,14 +62,14 @@
     <!-- The following should be transferred to app.js -->
 
     <script>
-        var usernameInput = document.getElementById('Username').value;
-        var passwordInput = document.getElementById('Password').value;
+        let usernameInput = document.getElementById('Username').value;
+        let passwordInput = document.getElementById('Password').value;
 
         // Check browser support for local storage
         if (typeof(Storage) !== "undefined") {
         // Store data
-        localStorage.setItem("username", String(usernameInput));
-        localStorage.setItem("password", String(passwordInput));
+        localStorage.setItem("username", (usernameInput));
+        localStorage.setItem("password", (passwordInput));
 
         // Retrieve
          console.log(localStorage.getItem("username"));
