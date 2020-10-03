@@ -140,15 +140,16 @@
   justify-content: center;
   flex-wrap: wrap;
   
+  
 }
 .book-item{
   padding: 2rem;
+  position: relative;
 }
 .book-item > img {
-  float: left;
+  /* float: left; */
   width: 180px;
   height: 270px;
-  object-fit: cover;
   opacity: 1;
   display: block;
   transition: .5s ease;
@@ -168,17 +169,15 @@
   opacity: 0.3;
 }
 
-.book-item:hover #borrow-book {
+.book-item:hover #borrow-item {
   opacity: 1;
 }
 #borrow-book{
-  background-color: #4CAF50;
-  color: white;
   font-size: 16px;
-  padding: 16px 32px;
-  /* color: red;
-  padding: 5px 9px;
-  background-color: rgb(72, 114, 116); */
+  padding: 10px 20px;
+  color:aliceblue;
+  border-radius: 8px;
+  background-color: rgb(51, 160, 233);
 }
 
 .footer{
