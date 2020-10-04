@@ -6,7 +6,6 @@ let idInput = document.getElementById('ID').value;
 const signUpForm = document.getElementById('signup-form');
 //Sign up form Validation -- TO BE DONE BY HANNAH
 
-console.log('I am app.js');
 
 //Implementing Browser storage on sign up form
 
@@ -29,7 +28,7 @@ signUpForm.addEventListener('submit', (e)=>{
         localStorage.getItem("username") = usernameCheck;
         localStorage.getItem("password") = passwordCheck; 
         localStorage.getItem("id") = idCheck;
-        
+
         console.log(usernameCheck);
         console.log(passwordCheck);
         console.log(idCheck);
