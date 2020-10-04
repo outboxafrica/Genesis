@@ -1,8 +1,4 @@
 //Variables -- MOST VARIABLES SHOULD BE DECLARED HERE
-let usernameInput = document.getElementById('Username').value;
-let passwordInput = document.getElementById('Password').value;
-let idInput = document.getElementById('ID').value;
-
 const signUpForm = document.getElementById('signup-form');
 //Sign up form Validation -- TO BE DONE BY HANNAH
 
@@ -14,6 +10,10 @@ signUpForm.addEventListener('submit', (e)=>{
     // Check browser support for local storage
     if (typeof(Storage) !== "undefined") {
         // Store data
+        var usernameInput = document.getElementById('Username').value;
+        var passwordInput = document.getElementById('psw').value;
+        var idInput = document.getElementById('id').value;
+
         localStorage.setItem("username", (usernameInput));
         localStorage.setItem("password", (passwordInput));
         localStorage.setItem("id", (idInput));
@@ -21,14 +21,12 @@ signUpForm.addEventListener('submit', (e)=>{
         
         
         // Retrieve
-        let usernameCheck;
-        let passwordCheck;
-        let idCheck;
+        let usernameCheck = localStorage.getItem("username");
+        let passwordCheck = localStorage.getItem("password");
+        let idCheck = localStorage.getItem("id");
 
-        localStorage.getItem("username") = usernameCheck;
-        localStorage.getItem("password") = passwordCheck; 
-        localStorage.getItem("id") = idCheck;
-
+         
+         
         console.log(usernameCheck);
         console.log(passwordCheck);
         console.log(idCheck);
