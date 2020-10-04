@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="signup-form">
-        <form>
+        <form id="signup-form">
             <div class="form-header">
                 <h2>Sign Up</h2>
                 <p>Fill out this form to sign up</p>
@@ -34,7 +34,7 @@
             </div>
             <div class="form-group">
                 <label for="id"><b>Enter Id</b></label><br>
-    <input type="text" placeholder="Enter Id" name="id" required>
+    <input type="text" id="ID" placeholder="Enter Id" name="id" required>
             </div>
             <div class="form-group">
                 <label for="psw"><b>Password</b></label>
@@ -58,25 +58,7 @@
         </form>
     </div>
 
-    <!-- The following should be transferred to app.js -->
 
-    <script>
-        let usernameInput = document.getElementById('Username').value;
-        let passwordInput = document.getElementById('Password').value;
-
-        // Check browser support for local storage
-        if (typeof(Storage) !== "undefined") {
-        // Store data
-        localStorage.setItem("username", (usernameInput));
-        localStorage.setItem("password", (passwordInput));
-
-        // Retrieve
-         console.log(localStorage.getItem("username"));
-         console.log(localStorage.getItem("password"));
-
-        } else {
-        console.log("Sorry, your browser does not support Web Storage...");
-        }
-    </script>
+    <script src="app.js"></script>
 </body>
 </html>
