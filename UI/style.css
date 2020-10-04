@@ -199,7 +199,7 @@ body {
 	margin-bottom: 20px;
 }
 /* Full-width input fields */
-input[type=text], input[type=password] {
+input[type=text], input[type=password], select {
   width: 90%;
   padding: 15px;
   margin: 3px 0 22px 0;
@@ -244,9 +244,9 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
+/* .container {
   padding: 16px;
-}
+} */
 
 /* Clear floats */
 .clearfix::after {
