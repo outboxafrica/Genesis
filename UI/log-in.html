@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Library</title>
+</head>
+<body style="background-color: #d4d3d3;">
+    <nav id="navbar">
+        <div id="logo">
+          <img id="img-logo" src="../images/books.jpg" alt="LOGO" />
+        </div>
+        <div id="links">
+          <ul>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="#genres">Genres</a></li>
+            <li><a href="#support">Support</a></li>
+          </ul>
+        </div>
+        <div id="nav-form">
+          <form>
+            <input type="text" placeholder="Search.." />
+            <button type="submit">Search</button>
+          </form>
+        </div>
+    </nav>
+
+    <div id="wrapper">
+        <div id="page-banner">
+            <h2>Log In</h2>
+        </div>
+
+        <form id="logIn">
+            <label for="username">UserName</label>
+            <input type="text" id="username" required 
+            >
+            <br>
+            <label for="password">Password</label>
+            <input type="password" id="password" required
+            >
+            <br>
+            <button id="btn-log-in" type="submit">Log In</button>
+            <br>
+        </form>
+        <p id="bottom-text">Don't have an account? <a href="signup.html">Sign Up</a></p>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
