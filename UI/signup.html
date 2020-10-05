@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700">
     <title>The Library</title>
-
+    <script src="./script/script.js"></script>
+    <script src="./script/modal.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+    <div class="sign-up-container">
+        <button id="modal-button" class="signup">Sign Up</button>
+      </div>
+      <div id="modal-form" class="modal"> 
     <div class="signup-form">
-        <form>
+        <form name="my Form" onsubmit="return validateForm()" method="post">
+            
             <div class="form-header">
                 <h2>Sign Up</h2>
                 <p>Fill out this form to sign up</p>
@@ -57,10 +63,17 @@
             </div>  	
         </form>
     </div>
-
+      </div>
     <!-- The following should be transferred to app.js -->
 
     <script>
+        function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
         var usernameInput = document.getElementById('Username').value;
         var passwordInput = document.getElementById('Password').value;
 
