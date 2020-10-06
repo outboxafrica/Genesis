@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700">
     <title>The Library</title>
-    <script src="./script/script.js"></script>
-    <script src="./script/modal.js"></script>
+   
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="sign-up-container">
-        <button id="modal-button" class="signup">Sign Up</button>
-      </div>
-      <div id="modal-form" class="modal"> 
+    
     <div class="signup-form">
         <form id="signup-form" name="signup-form">
             <div class="form-header">
@@ -26,7 +22,7 @@
             </div>
             <div class="form-group">
                 <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+    <input type="text" placeholder="Enter Email" name="email" id="email" required>
             </div>
             <div class="form-group">
                 <label for="register"><b>Register as:</b></label>
@@ -65,30 +61,6 @@
       </div>
     <!-- The following should be transferred to app.js -->
 
-    <script>
-        function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-}
-        var usernameInput = document.getElementById('Username').value;
-        var passwordInput = document.getElementById('Password').value;
-
-        // Check browser support for local storage
-        if (typeof(Storage) !== "undefined") {
-        // Store data
-        localStorage.setItem("username", String(usernameInput));
-        localStorage.setItem("password", String(passwordInput));
-
-        // Retrieve
-         console.log(localStorage.getItem("username"));
-         console.log(localStorage.getItem("password"));
-
-        } else {
-        console.log("Sorry, your browser does not support Web Storage...");
-        }
-    </script>
+    <script src="../scripts/app.js"></script>
 </body>
 </html>
