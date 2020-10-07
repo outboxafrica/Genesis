@@ -2,8 +2,8 @@
 
 const logInButton = document.getElementById('btn-log-in');
 const logInForm = document.getElementById('logIn');
-const usernamelogIn = document.getElementById('username').value;
-const passwordlogIn = document.getElementById('password').value;
+// const usernamelogIn = document.getElementById('username').value;
+// const passwordlogIn = document.getElementById('password').value;
 const signUpForm = document.getElementById('signup-form');
 
 
