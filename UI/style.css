@@ -129,7 +129,7 @@
 }
 .featured-books {
   width: 100%;
-  height: 600px;
+  height: 520px;
   background-color: #FFFBFB;
 }
 
@@ -384,7 +384,7 @@ body{
     }
 }    
    
-.books {
+.feat-books {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -394,6 +394,7 @@ body{
   
 }
 .book-item{
+  list-style-type: none;
   padding: 2rem;
   position: relative;
 }
@@ -406,7 +407,7 @@ body{
   backface-visibility: hidden;
 
 }
-.book-item #borrow-item{
+.book-item .borrow-item{
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -419,10 +420,10 @@ body{
   opacity: 0.3;
 }
 
-.book-item:hover #borrow-item {
+.book-item:hover .borrow-item {
   opacity: 1;
 }
-#borrow-book{
+.borrow-book{
   font-size: 13px;
   padding: 10px 20px;
   color:aliceblue;
