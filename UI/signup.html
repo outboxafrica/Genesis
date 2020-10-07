@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700"
+    />
     <title>The Library</title>
        <link rel="stylesheet" href="style.css" />
        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
@@ -11,56 +14,87 @@
 <body>
    
     <div class="signup-form">
-        <form id="signup-form" name="signup-form">
-            <div class="form-header">
-                <h2>Sign Up</h2>
-                <p>Fill out this form to sign up</p>
-            </div>
-            <div class="form-group">
-                <label for="email"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" id="Username" name="Username" required>
-            </div>
-            <div class="form-group">
-                <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="register"><b>Register as:</b></label>
+      <form id="form" name="signup-form">
+        <div class="form-header">
+          <h2>Sign Up</h2>
+          <p>Fill out this form to sign up</p>
+        </div>
+        <div class="form-group">
+          <label for="name"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            id="Username"
+            name="Username"
+          />
+          <small>Error message</small>
+        </div>
+        <div class="form-group">
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            placeholder="Enter Email"
+            id="email"
+            name="email"
+          />
+          <small>Error message</small>
+        </div>
+        <div class="form-group">
+          <label for="register"><b>Register as:</b></label>
 
-                <select name="register" id="register">
-                <option value="EDU LF">EDU LF</option>
-                <option value="EDU Staff">EDU Staff</option>
-                <option value="EDU student">EDU student</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="id"><b>Enter Id</b></label><br>
-    <input type="text" id="id" placeholder="Enter Id" name="id" required>
-            </div>
-            <div class="form-group">
-                <label for="psw"><b>Password</b></label>
-                <input type="password" id="psw" placeholder="Enter Password" name="psw" required> 
-            </div>
-            <div class="form-group">
-                <label for="psw-repeat"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Confirm Password" name="psw-repeat" required> 
-            </div>
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
-                  </label> 
-            </div>
-            <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          <select name="register" id="register">
+            <option value="EDU LF">EDU LF</option>
+            <option value="EDU Staff">EDU Staff</option>
+            <option value="EDU student">EDU student</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="id"><b>Enter Id</b></label
+          ><br />
+          <input type="text" id="id" placeholder="Enter Id" name="id" />
+          <small>Error message</small>
+        </div>
+        <div class="form-group">
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            id="psw"
+            placeholder="Enter Password"
+            name="psw"
+          />
+          <small>Error message</small>
+        </div>
+        <div class="form-group">
+          <label for="psw-repeat"><b>Confirm Password</b></label>
+          <input
+            type="password"
+            id="psw2"
+            placeholder="Confirm Password"
+            name="psw-repeat"
+          />
+          <small>Error message</small>
+        </div>
+        <div class="form-group">
+          <label>
+            <input
+              type="checkbox"
+              name="remember"
+              style="margin-bottom: 15px"
+            />
+            Remember me
+          </label>
+        </div>
+        <p>
+          By creating an account you agree to our
+          <a href="#" style="color: dodgerblue">Terms & Privacy</a>.
+        </p>
 
-            <div class="clearfix">
-              
-              <button type="submit" class="signupbtn">Sign Up</button>
-            </div>  	
-        </form>
+        <div class="clearfix">
+          <button type="submit" class="signupbtn">Sign Up</button>
+        </div>
+      </form>
     </div>
-    
-    <!-- The following should be transferred to app.js -->
 
-    <script src="app.js"></script>
-</body>
+    <script src="../scripts/app.js"></script>
+  </body>
 </html>
