@@ -463,11 +463,11 @@ body{
 }
 
  /* Signup css start */
-/* body {
+#signup-form {
 	color: #999;
 	background: #e2e2e2;
 	font-family: 'Roboto', sans-serif;
-} */
+}
 .form-control {
 	min-height: 20px;
 	box-shadow: none;
@@ -519,7 +519,7 @@ body{
 	margin-bottom: 20px;
 }
 /* Full-width input fields */
-/* input[type=text], input[type=password], select {
+.form-group input[type=text], .form-group input[type=password], .form-group select {
   width: 90%;
   padding: 15px;
   margin: 3px 0 22px 0;
@@ -528,10 +528,10 @@ body{
   
 }
 
-input[type=text]:focus, input[type=password]:focus {
+.form-group input[type=text]:focus, .form-group input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-} */
+}
 
 hr {
   border: 1px solid #f1f1f1;
@@ -560,7 +560,7 @@ hr {
 
 
 /* Set a style for all buttons */
-/* button {
+.signupbtn {
   background-color: #51adcf;
   color: white;
   padding: 14px 20px;
@@ -570,9 +570,9 @@ hr {
   opacity: 0.9;
 }
 
-button:hover {
+.signupbtn:hover {
   opacity:1;
-} */
+}
 
 /* Extra styles for the cancel button */
 

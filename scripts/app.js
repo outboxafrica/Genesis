@@ -1,5 +1,9 @@
 //Variables -- MOST VARIABLES SHOULD BE DECLARED HERE
 const signUpForm = document.getElementById('signup-form');
+const logInButton = document.getElementById('btn-log-in');
+const logInForm = document.getElementById('logIn');
+const usernamelogIn = document.getElementById('username').value;
+const passwordlogIn = document.getElementById('password').value;
 
 // //Signup form validation
 // const form = document.getElementById('form');
@@ -74,29 +78,11 @@ const signUpForm = document.getElementById('signup-form');
 
 
 
-//   var usernameInput = document.getElementById("Username").value;
-//   var passwordInput = document.getElementById("Password").value;
-
-  // Check browser support for local storage
-  if (typeof Storage !== "undefined") {
-	// Store data
-	localStorage.setItem("username", String(usernameInput));
-	localStorage.setItem("password", String(passwordInput));
-
-	// Retrieve
-	console.log(localStorage.getItem("username"));
-	console.log(localStorage.getItem("password"));
-  } else {
-	console.log("Sorry, your browser does not support Web Storage...");
-  }
 
 
 
-const logInButton = document.getElementById('btn-log-in');
-const logInForm = document.getElementById('logIn');
-const usernamelogIn = document.getElementById('username').value;
-const passwordlogIn = document.getElementById('password').value;
-const signUpForm = document.getElementById('signup-form');
+
+
 
 
 //Event listeners
