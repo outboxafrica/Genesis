@@ -130,19 +130,336 @@
 }
 .featured-books {
   width: 100%;
-  height: 100vh;
+  height: 600px;
+  background-color: #FFFBFB;
 }
 
+#wrapper{
+  width: 90%;
+  max-width: 700px;
+  margin: 80px auto;
+  border-radius: 6px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  padding: 20px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  border: 1px solid lightgray;
+  background-color: #FFFBFB;
+  text-align: center;
+}
+
+#page-banner{
+  background: #eee ;
+  padding: 10px 0;
+  margin: 10px 0;
+  width: 100%;
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+#logIn{
+  margin: 20px;
+  padding: 15px;
+  padding-top: 30px;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#logIn input{
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #444;
+    margin: 10px;
+}
+
+#logIn button{
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #3ba1b8;
+  color: #FFFBFB;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#wrapper #bottom-text{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px;
+}
+
+#bottom-text a{
+  color: #444;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+  #navbar{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center; 
+  }
+
+  #navbar ul{
+    flex-direction: column;
+  }
+
+  #nav-form{
+    text-align: center;
+  }
+
+  #nav-form button{
+    margin: 10px;
+    padding: .4rem 1rem;
+
+  }
+
+  #wrapper{
+    max-width: 400px;
+  }
+
+  #logIn{
+    text-align: center;
+    
+  }
+}
+
+/*really small phones 350px and below*/
+@media screen and (max-width: 350px){
+  #wrapper{
+    max-width: 280px;
+  }
+  #logIn{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Medium devices (portrait tablets and large phones, 600px and up) */
+@media screen and (min-width: 600px){
+  #wrapper{
+    max-width: 500px;
+  }
+ 
+}
+
+
+
+
+body{
+    background-color: #EFEDED;
+}
+
+  
+  /* Style the buttons inside the tab */
+  .category button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
+  
+  /* Change background color of buttons on hover */
+  .category button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .category button.active {
+    background-color: #ccc;
+  }
+  
+  /* Style the tab content, the books in each category*/
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+
+  /* Style the tab */
+.category{
+    margin-top: 10px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+
+/* .books{
+    background: #C4C4C4;
+    margin:5%;
+} */
+.col-books{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.col-books div{
+    flex-flow: row wrap;
+}
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+
+.container img{
+    opacity: 1;
+    padding:30px;
+    cursor: pointer;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.container:hover img{
+    opacity: 0.3;
+  }
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    /* -ms-transform: translate(-50%, -50%) */
+}
+
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #4c93af;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    cursor: pointer;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+}
+
+.delete{
+    background-color: rgb(96, 96, 248);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #eee;
+    border-radius: 4px;
+}
+
+.delete:hover{
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+}
+
+.delete:disabled{
+    color: #444;
+}
+
+@media only screen and (min-width:700px){
+    .col-books{
+        /* flex-direction: column; */
+        justify-content: center;
+        align-items: center;
+    }
+}    
+   
 .books {
   display: flex;
   flex-direction: row;
   width: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  
+}
+.book-item{
+  padding: 2rem;
+  position: relative;
+}
+.book-item > img {
+  /* float: left; */
+  width: 180px;
+  height: 270px;
+  opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+
+}
+.book-item>div{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+.book-item:hover img{
+  opacity: 0.3;
+}
+
+.book-item:hover #borrow-item {
+  opacity: 1;
+}
+#borrow-book{
+  font-size: 16px;
+  padding: 10px 20px;
+  color:aliceblue;
+  border-radius: 8px;
+  background-color: rgb(51, 160, 233);
+}
+
+.footer{
+  width: 100%;
+  height: 100px;
+  background-color: #C4C4C4;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   flex-wrap: wrap;
   
 }
-#books > img {
-  width: 100%;
-  height: auto;
+.footer>div{
+  padding: 15px;
+}
+
+#media-icons img{
+  display: inline-block;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 5px;
+  
+}
+
+
+
+@media only screen and (max-width: 650px){
+  .footer{
+    flex-direction: column;
+  }
 }
 
  /* Signup css start */
@@ -202,7 +519,7 @@
 	margin-bottom: 20px;
 }
 /* Full-width input fields */
-input[type=text], input[type=password], select {
+/* input[type=text], input[type=password], select {
   width: 90%;
   padding: 15px;
   margin: 3px 0 22px 0;
@@ -214,7 +531,7 @@ input[type=text], input[type=password], select {
 input[type=text]:focus, input[type=password]:focus {
   background-color: #ddd;
   outline: none;
-}
+} */
 
 hr {
   border: 1px solid #f1f1f1;
@@ -243,20 +560,19 @@ hr {
 
 
 /* Set a style for all buttons */
-button {
+/* button {
   background-color: #51adcf;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
 }
 
 button:hover {
   opacity:1;
-}
+} */
 
 /* Extra styles for the cancel button */
 
