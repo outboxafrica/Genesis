@@ -463,7 +463,7 @@ body{
 }
 
  /* Signup css start */
-##signup-form {
+#signup-form {
 	color: #999;
 	background: #e2e2e2;
 	font-family: 'Roboto', sans-serif;
