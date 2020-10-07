@@ -168,7 +168,7 @@
 
 #logIn input{
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1.5px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
     color: #444;
@@ -283,7 +283,7 @@ body{
   .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-top: none;
   }
 
@@ -297,16 +297,18 @@ body{
 }
 
 
-/* .books{
-    background: #C4C4C4;
-    margin:5%;
-} */
+.books{
+    background-color: #EFEDED;
+    margin-top: 30px;
+} 
+
 .col-books{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+
 }
 
 .col-books div{
@@ -384,7 +386,7 @@ body{
     }
 }    
    
-.books {
+.feat-books {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -398,7 +400,6 @@ body{
   position: relative;
 }
 .book-item > img {
-  /* float: left; */
   width: 180px;
   height: 270px;
   opacity: 1;
@@ -429,7 +430,8 @@ body{
   color:aliceblue;
   border-radius: 8px;
   background-color: rgb(51, 160, 233);
-}
+  cursor: pointer;
+} 
 
 .footer{
   width: 100%;
