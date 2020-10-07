@@ -101,21 +101,21 @@ function isEmail(email) {
 // 	  return false;
 // 	}
 //   }
-//   var usernameInput = document.getElementById("Username").value;
-//   var passwordInput = document.getElementById("Password").value;
+  var usernameInput = document.getElementById("Username").value;
+  var passwordInput = document.getElementById("Password").value;
 
-//   // Check browser support for local storage
-//   if (typeof Storage !== "undefined") {
-// 	// Store data
-// 	localStorage.setItem("username", String(usernameInput));
-// 	localStorage.setItem("password", String(passwordInput));
+  // Check browser support for local storage
+  if (typeof Storage !== "undefined") {
+	// Store data
+	localStorage.setItem("username", String(usernameInput));
+	localStorage.setItem("password", String(passwordInput));
 
-// 	// Retrieve
-// 	console.log(localStorage.getItem("username"));
-// 	console.log(localStorage.getItem("password"));
-//   } else {
-// 	console.log("Sorry, your browser does not support Web Storage...");
-//   }
+	// Retrieve
+	console.log(localStorage.getItem("username"));
+	console.log(localStorage.getItem("password"));
+  } else {
+	console.log("Sorry, your browser does not support Web Storage...");
+  }
 
 
 
