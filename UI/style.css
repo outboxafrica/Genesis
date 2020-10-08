@@ -185,7 +185,18 @@
   color: #FFFBFB;
   font-size: 20px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  opacity: 0.9;
 }
+
+#logIn button:hover{
+  opacity: 1;
+}
+
+/* #logIn button a{
+  text-decoration: none;
+  color: #FFFBFB;
+
+} */
 
 #wrapper #bottom-text{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -258,6 +269,10 @@ body{
     background-color: #EFEDED;
 }
 
+#welcome-text{
+  float: right;
+  font-size: 15px;
+}
   
   /* Style the buttons inside the tab */
   .category button {

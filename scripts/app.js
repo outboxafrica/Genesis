@@ -2,16 +2,11 @@
 
 const logInButton = document.getElementById('btn-log-in');
 const logInForm = document.getElementById('logIn');
-const usernamelogIn = document.getElementById('username').value;
-const passwordlogIn = document.getElementById('password').value;
+
 const signUpForm = document.getElementById('signup-form');
 
 
-//Event listeners
-logInForm.addEventListener('submit', (e)=>{
-e.preventDefault();
-logInEvent();
-});
+//EVENT LISTENERS
 
 
 
@@ -22,30 +17,41 @@ signUpForm.addEventListener('submit', (e)=>{
     // Check browser support for local storage
     if (typeof(Storage) !== "undefined") {
         // Store data
-        var usernameInput = document.getElementById('Username').value;
-        var passwordInput = document.getElementById('psw').value;
-        var idInput = document.getElementById('id').value;
-        var emailInput = document.getElementById('email').value;
+        let usernameInput = document.getElementById('Username').value;
+        let passwordInput = document.getElementById('psw').value;
+        let idInput = document.getElementById('id').value;
+        let emailInput = document.getElementById('email').value;
 
-        localStorage.setItem("username", (usernameInput));
-        localStorage.setItem("password", (passwordInput));
-        localStorage.setItem("id", (idInput));
-        localStorage.setItem("email", (emailInput));
+        
+          let user = {
+            'name': usernameInput,
+            'email': emailInput,
+            'ID': idInput,
+            'password': passwordInput
+          };
 
+          localStorage.setItem('user', JSON.stringify(user));
+
+        // localStorage.setItem("username", (usernameInput));
+        // localStorage.setItem("password", (passwordInput));
+        // localStorage.setItem("id", (idInput));
+        // localStorage.setItem("email", (emailInput));
+        // JSON.stringify(usernameInput, passwordInput, idInput, emailInput )
         
         
         // Retrieve
-        let usernameCheck = localStorage.getItem("username");
-        let passwordCheck = localStorage.getItem("password");
-        let idCheck = localStorage.getItem("id");
-        let emailCheck = localStorage.getItem("email");
+        let userCheck = JSON.parse(localStorage.getItem('user'));
+        // let usernameCheck = localStorage.getItem("username");
+        // let passwordCheck = localStorage.getItem("password");
+        // let idCheck = localStorage.getItem("id");
+        // let emailCheck = localStorage.getItem("email");
 
          
          
-        console.log(usernameCheck);
-        console.log(passwordCheck);
-        console.log(idCheck);
-        console.log(emailCheck);
+        console.log(userCheck);
+        // console.log(passwordCheck);
+        // console.log(idCheck);
+        // console.log(emailCheck);
        
         
         } else {
@@ -54,11 +60,26 @@ signUpForm.addEventListener('submit', (e)=>{
 });
 
 
+logInForm.addEventListener('submit', (e)=>{
+  e.preventDefault();
+  logInEvent();
+});
 
 
 //Functions
 function logInEvent (){
-    
+  let usernamelogIn = document.getElementById('username').value;
+  let passwordlogIn = document.getElementById('password').value;
+
+  //Loop through local storage and if a match is identified for each field, allow the user to log in.
+  if(usernamelogIn !== usernameInput || passwordlogIn !== passwordInput ){
+    document.getElementById('error-msg').textContent = "The username, password or email entered are incorrect. ";
+  }
+  else{
+
+    document.getElementById('welcome-text').textContent = "Welcome " + usernamelogIn + " !";
+
+  }
 }
 
 
