@@ -104,45 +104,44 @@ function openCategory(event, category) {
 //Authenticity for the log in form
  //A loop may be needed to loop over the data in the cache and return a match 
  
-document.addEventListener('DOMContentLoaded', function(){
-  const list = document.querySelector('.feat-book');
+
+const list = document.querySelector('.featured-books .feat-books');
 
   //delete book
 
-  list.addEventListener('click', (e) => {
-    if(e.target.className == 'buttonn'){
-      const li = e.target.parentElement.parentElement;
-      li.parentNode.removeChild(li)
-    }
-  });
-
-  //add book 
-  const addBook = document.getElementById('book-log');
-  addBook.addEventListener('click', (e) => {
-    e.preventDefault()
-  });
-
-  //Book elements
-
-  const bookImage = addBook.querySelector('input[type="file"]').value;
-  const li = document.createElement('li');
-  const image = document.createElement('img')
-  const deleteButton = document.createElement('span')
-
-  //adding content
-  
-  deleteButton.textContent = 'delete';
-
-  //classes
-  bookImage.classList.add('image');
-  deleteButton.classList.add('borrow-item')
-
-  //appending image to DOM
-  li.appendChild(bookImage);
-  li.appendChild(deleteButton);
-  list.appendChild(li)
-
-
-
-
+list.addEventListener('click', (e) => {
+  if(e.target.className == 'buttonn'){
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
 });
+
+  // //add book 
+  // const addBook = document.getElementById('book-log');
+  // addBook.addEventListener('click', (e) => {
+  //   e.preventDefault()
+  // });
+
+  // //Book elements
+
+  // const bookImage = addBook.querySelector('input[type="file"]').value;
+  // const li = document.createElement('li');
+  // const image = document.createElement('img')
+  // const deleteButton = document.createElement('span')
+
+  // //adding content
+  
+  // deleteButton.textContent = 'delete';
+
+  // //classes
+  // bookImage.classList.add('image');
+  // deleteButton.classList.add('borrow-item')
+
+  // //appending image to DOM
+  // li.appendChild(bookImage);
+  // li.appendChild(deleteButton);
+  // list.appendChild(li)
+
+
+
+
