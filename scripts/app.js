@@ -12,6 +12,14 @@ const usernamelogIn = document.getElementById('username').value;
 const passwordlogIn = document.getElementById('password').value;
 const signUpForm = document.getElementById('signup-form');
 
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
 
 //Event listeners
 logInForm.addEventListener('submit', (e)=>{
@@ -59,6 +67,22 @@ signUpForm.addEventListener('submit', (e)=>{
         }
 });
 
+// filter books
+const forms = document.forms;
+const searchBar = forms['search-books'].querySelector('input');
+const list = document.querySelector('.col-books ul');
+searchBar.addEventListener('keyup', (e) => {
+  const term = e.target.value.toLowerCase();
+  const books = list.getElementsByTagName('li');
+  Array.from(books).forEach((book) => {
+    const title = book.firstElementChild.textContent;
+    if(title.toLowerCase().indexOf(term) != -1){
+      book.style.display = 'block';
+    } else {
+      book.style.display = 'none';
+    }
+  });
+});
 
 
 

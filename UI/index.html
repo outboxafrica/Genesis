@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Library</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <div id="navbar">
       <div id="logo">
         <img id="img-logo" src="../images/books.png" alt="LOGO" />
       </div>
-      <a href="#" class="toggle">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-      </a>
+      
       <div id="links">
         <ul>
           <li><a href="books.html">Books</a></li>
@@ -23,20 +20,42 @@
           <li><a href="#support">Support</a></li>
         </ul>
       </div>
+
       <div id="nav-form">
         <a href="log-in.html">Log In</a>
-        <form>
+        <form id="search-books">
           <input type="text" placeholder="Search.." />
-          <button type="submit">Search</button>
         </form>
       </div>
     </div>
-    <div id="home-section">
+
+    <!--The Mobile Menu-->
+<div class="topnav" id="myTopnav">
+  <div id="mobile-logo">
+    <img id="img" src="../images/books.png" alt="LOGO" />
+  </div>
+  <div style="display: flex; align-self: center;">
+      <input type="text" class="active-search" placeholder="Search..">
+      <span style="padding-left: 10px"><a href="log-in.html">Log In</a></span>
+  </div>
+  <a href="books.html">Books</a>
+  <a href="#genres">Genres</a>
+  <a href="#support">Support</a>
+    <a  href="javascript:void(0);" class="toggle" onclick="myFunction()">
+      <!-- <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span> -->
+      <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+  <div id="home-section">
         <div id="intro">
              <h2>Your library with you as you go!</h2>
              <p>New books added on release</p>
          </div>
-    </div>
+  </div>
     
         <section class="featured-books">
         <h1 style="text-align: center; padding: 20px; font-size: 2rem;">Featured books</h1>
