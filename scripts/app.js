@@ -1,15 +1,12 @@
-const toggleBtn = document.getElementsByClassName('toggle')[0]
 const navBar = document.getElementById('links')[0]
-toggleBtn.addEventListener('click', ()=>{
-  navBar.classList.toggle('active')
-})
+
 
 //Variables -- MOST VARIABLES SHOULD BE DECLARED HERE
 
 const logInButton = document.getElementById('btn-log-in');
 const logInForm = document.getElementById('logIn');
-const usernamelogIn = document.getElementById('username').value;
-const passwordlogIn = document.getElementById('password').value;
+// const usernamelogIn = document.getElementById('username').value;
+// const passwordlogIn = document.getElementById('password').value;
 const signUpForm = document.getElementById('signup-form');
 
 function myFunction() {
@@ -70,10 +67,10 @@ signUpForm.addEventListener('submit', (e)=>{
 // filter books
 const forms = document.forms;
 const searchBar = forms['search-books'].querySelector('input');
-const list = document.querySelector('.col-books ul');
+const bookList = document.querySelector('.col-books ul');
 searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
-  const books = list.getElementsByTagName('li');
+  const books = bookList.getElementsByTagName('li');
   Array.from(books).forEach((book) => {
     const title = book.firstElementChild.textContent;
     if(title.toLowerCase().indexOf(term) != -1){
