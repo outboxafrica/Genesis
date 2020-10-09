@@ -2,8 +2,8 @@
 const signUpForm = document.getElementById('signup-form');
 const logInButton = document.getElementById('btn-log-in');
 const logInForm = document.getElementById('logIn');
-const usernamelogIn = document.getElementById('username').value;
-const passwordlogIn = document.getElementById('password').value;
+// const usernamelogIn = document.getElementById('username').value;
+// const passwordlogIn = document.getElementById('password').value;
 
 // //Signup form validation
 // const form = document.getElementById('form');
@@ -100,6 +100,12 @@ signUpForm.addEventListener('submit', (e)=>{
     // Check browser support for local storage
     if (typeof(Storage) !== "undefined") {
         // Store data
+
+       
+        const message = "Form draft has been saved!";
+        displayAlert(message);
+
+
         var usernameInput = document.getElementById('Username').value;
         var passwordInput = document.getElementById('psw').value;
         var idInput = document.getElementById('id').value;
@@ -112,18 +118,18 @@ signUpForm.addEventListener('submit', (e)=>{
 
         
         
-        // Retrieve
-        let usernameCheck = localStorage.getItem("username");
-        let passwordCheck = localStorage.getItem("password");
-        let idCheck = localStorage.getItem("id");
-        let emailCheck = localStorage.getItem("email");
+        // // Retrieve
+        // let usernameCheck = localStorage.getItem("username");
+        // let passwordCheck = localStorage.getItem("password");
+        // let idCheck = localStorage.getItem("id");
+        // let emailCheck = localStorage.getItem("email");
 
          
          
-        console.log(usernameCheck);
-        console.log(passwordCheck);
-        console.log(idCheck);
-        console.log(emailCheck);
+        // console.log(usernameCheck);
+        // console.log(passwordCheck);
+        // console.log(idCheck);
+        // console.log(emailCheck);
        
         
         } else {
@@ -131,7 +137,9 @@ signUpForm.addEventListener('submit', (e)=>{
         }
 });
 
-
+// saveCheckbox.addEventListener('checked', ()=>{
+//   document.onload = populateForm(); // populate the form when the document is loaded
+// });
 
 
 //Functions
@@ -139,7 +147,13 @@ function logInEvent (){
     
 }
 
-
+const displayAlert = (message) => {
+  alertBox.innerText = message; // add the message into the alert box
+  alertBox.style.display = "block"; // make the alert box visible
+  setTimeout(function() {
+    alertBox.style.display = "none"; // hide the alert box after 1 second
+  }, 1000);
+};
 
 
 
@@ -176,3 +190,5 @@ function openCategory(event, category) {
 //Authenticity for the log in form
  //A loop may be needed to loop over the data in the cache and return a match 
  
+ 
+
