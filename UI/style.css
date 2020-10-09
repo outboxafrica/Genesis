@@ -24,28 +24,17 @@
     padding: 20px;
 }
 
-#nav-form button, #nav-form input{
+#nav-form input{
     padding: 5px;
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1px solid #eee;
     color: #444;
-
-}
-#nav-form button{
-  border-radius: 9px;
-  padding: 7px 15px;
-}
-
-#nav-form input{
     background-color: #ddd;
     border-radius: 15px;
 }
 
-#nav-form button:hover{
-    background-color: #ddd;
-    color: black;
-}
+
 
 #navbar {
   width: 100%;
@@ -254,9 +243,9 @@
 
 
 
-body{
+/* body{
     background-color: #EFEDED;
-}
+} */
 
   
   /* Style the buttons inside the tab */
@@ -483,7 +472,8 @@ body{
 	margin: -30px -30px 20px;
 	padding: 30px 30px 10px;
 	text-align: center;
-	background:  #51adcf;
+  background-color:  #859297;
+  background: linear-gradient(to bottom right, #C4C4C4, #666565);
 	border-bottom: 1px solid #eee;
 	color: #fff;
 }
@@ -512,14 +502,14 @@ body{
   
 	margin-bottom: 15px;
 	background: #f0f0f0;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.3);
 	padding: 30px;
 }
 .signup-form .form-group {
 	margin-bottom: 20px;
 }
 /* Full-width input fields */
-.form-group input[type=text], .form-group input[type=password], .form-group select {
+.form-group input, .form-group select {
   width: 90%;
   padding: 15px;
   margin: 3px 0 22px 0;
