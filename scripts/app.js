@@ -63,6 +63,11 @@ signUpForm.addEventListener('submit', (e)=>{
 logInForm.addEventListener('submit', (e)=>{
   e.preventDefault();
   logInEvent();
+  
+
+  document.getElementById('welcome-text').textContent = "Welcome " + usernamelogIn + " !";
+
+  
 });
 
 
@@ -75,11 +80,7 @@ function logInEvent (){
   if(usernamelogIn !== usernameInput || passwordlogIn !== passwordInput ){
     document.getElementById('error-msg').textContent = "The username, password or email entered are incorrect. ";
   }
-  else{
-
-    document.getElementById('welcome-text').textContent = "Welcome " + usernamelogIn + " !";
-
-  }
+  return;
 }
 
 
