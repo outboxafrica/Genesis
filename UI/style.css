@@ -258,6 +258,33 @@ body{
     background-color: #EFEDED;
 }
 
+#tabbed-content {
+  margin: 30px;
+}
+#tabbed-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+#tabbed-content li{
+  display: inline-block;
+  padding: 10px 14px;
+  background: #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#tabbed-content .panel{
+  display: none;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  border-radius: 4px;
+}
+
+#tabbed-content .panel.active{
+  display: flex;
+}
+
   
   /* Style the buttons inside the tab */
   .category button {
@@ -596,6 +623,7 @@ hr {
   clear: both;
   display: table;
 }
+
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
