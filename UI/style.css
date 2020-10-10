@@ -24,28 +24,18 @@
     padding: 20px;
 }
 
-#nav-form button, #nav-form input{
+#nav-form input{
     padding: 5px;
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: 1px solid #eee;
     color: #444;
-
-}
-#nav-form button{
-  border-radius: 9px;
-  padding: 7px 15px;
-}
-
-#nav-form input{
     background-color: #ddd;
     border-radius: 15px;
+
 }
 
-#nav-form button:hover{
-    background-color: #ddd;
-    color: black;
-}
+
 
 #navbar {
   width: 100%;

@@ -75,11 +75,14 @@ logInForm.addEventListener('submit', (e)=>{
 function logInEvent (){
   let usernamelogIn = document.getElementById('username').value;
   let passwordlogIn = document.getElementById('password').value;
+  
+  localStorage.getItem(JSON.parse(userData));
 
   //Loop through local storage and if a match is identified for each field, allow the user to log in.
   if(usernamelogIn !== usernameInput || passwordlogIn !== passwordInput ){
     document.getElementById('error-msg').textContent = "The username, password or email entered are incorrect. ";
   }
+
   return;
 }
 
