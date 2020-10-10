@@ -360,14 +360,7 @@ body{
     justify-content: center;
 }
 
-.delete{
-    background-color: rgb(96, 96, 248);
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 18px;
-    color: #eee;
-    border-radius: 4px;
-}
+
 
 .delete:hover{
     background-color: #eee;
