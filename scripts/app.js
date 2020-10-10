@@ -57,8 +57,8 @@ function passMatch(){
   }
 }
 function idValid(){
-  var pat4 = /^[0-9]{5}$/;
-  var idpat=pat4.exec(signup-form.id.value);
+  var pat4 = /^[0-9]{1}$/;
+  var idpat=pat4.exec(signupform.id.value);
   if(idpat==null){
       document.getElementById('err4').textContent="ID contains numbers only";
   }
@@ -141,7 +141,7 @@ const displayAlert = (message) => {
               localStorage.setItem('Users', JSON.stringify(userData) );
 
             }
-            document.querySelector('#signup-form').reset();
+            document.querySelector('#signupform').reset();
             
             displayAlert(message);
         }
@@ -153,7 +153,9 @@ const displayAlert = (message) => {
             // });
             signUpForm.addEventListener('submit', (e)=>{
               e.preventDefault();
-              addUser()
+              addUser();
+              
+              location.assign("../UI/books.html")
           });
           
         });
