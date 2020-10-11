@@ -70,22 +70,28 @@ tabs.addEventListener('click', (e) => {
 // filter books
 const forms = document.forms;
 const searchBar = forms['search-books'].querySelector('input');
-const bookList = document.querySelector('.col-books ul');
+const bookList = document.querySelector('.all-books ul');
 searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
   const books = bookList.getElementsByTagName('li');
   Array.from(books).forEach((book) => {
     const title = book.firstElementChild.textContent;
     if (title.toLowerCase().indexOf(term) != -1) {
-      book.style.display = 'block';
+      book.style.display = 'flex';
     } else {
       book.style.display = 'none';
     }
   });
 
 });   
+// const borrowBtn = document.querySelector('.borrow');
+//  borrowBtn.addEventListener('click', ()=>{
+  // p.textContent = value;
+  // p.classList.add('name');
 
 
+
+ 
 function passValid() {
     var pat3 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
     var passPat = pat3.exec(signupform.psw.value);
@@ -211,16 +217,26 @@ const displayAlert = (message) => {
 
 const list = document.querySelector('.all-books ul');
 // const forms = document.forms;
-
+const borrowCart = document.getElementById('Borrow');
+const bookLis = document.querySelector('.title').textContent;
 // delete books
 list.addEventListener('click', (e) => {
   if (e.target.className == 'delete-bk') {
     const li = e.target.parentElement;
     li.parentNode.removeChild(li);
   }
-  if (e.target.className == 'borrow') {
-    const borrowBtn = document.querySelector('.borrow')
-    borrowBtn.disabled = true;
+  else if (e.target.className == 'borrow') {
+    const div = document.createElement('div');
+    const p = document.createElement('p')
+    // bookLis.forEach((item)=>{
+    //   item.innerHTML = span.innerHTML;
+    // });
+    p.textContent = bookLis + "  ";
+    p.classList.add('cart');
+    div.appendChild(p);
+    
+    borrowCart.appendChild(div);
+
   }
 });
 
