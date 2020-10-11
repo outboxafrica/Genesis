@@ -57,7 +57,7 @@ function passMatch(){
   }
 }
 function idValid(){
-  var pat4 = /^[0-9]{1}$/;
+  var pat4 = /^[0-9]{1,4}$/;
   var idpat=pat4.exec(signupform.id.value);
   if(idpat==null){
       document.getElementById('err4').textContent="ID contains numbers only";
@@ -66,6 +66,7 @@ function idValid(){
       document.getElementById('err4').textContent="";
   }
 }
+
 function myID() {
   var select = document.getElementById("register").value;
  var idInput = document.getElementById("id");
@@ -84,21 +85,42 @@ if(select == 'EDU Staff'){
 
 	
 
-//Event listeners
 
-//Functions
-function logInEvent (){
-  // let usernamelogIn = document.getElementById('username').value;
-  // let passwordlogIn = document.getElementById('password').value;
-  // if(localStorage != null){}
-  usersdata = JSON.parse( localStorage.getItem('Users' ) );
-  console.log(usersdata)
-  //Loop through local storage and if a match is identified for each field, allow the user to log in.
-  // if(usernamelogIn !== usernameInput || passwordlogIn !== passwordInput ){
-  //   document.getElementById('error-msg').textContent = "The username, password or email entered are incorrect. ";
-  // }
+let usersdata = JSON.parse( localStorage.getItem('Users' ) );
+console.log(usersdata);
 
-  return;
+//Add, delete and borrow features
+for(let i in usersdata){
+  if(usersdata[i].id <= 20){
+    //add and delete buttons should be enabled
+  }
+  else if(usersdata[i].id < 1000 && usersdata[i].title !== "Other"){
+    //Borrow and search features should be enabled
+  }
+}
+
+function validatelogIn (){
+
+  let usernamelogIn = document.getElementById('username').value;
+  let emailLogIn = document.getElementById('Email').value;
+
+  for(let p in usersdata)
+  {
+    console.log(p+':'+usersdata[p].uname+'|'+usersdata[p].email);
+
+    //Loop through local storage and if a match is identified for each field, allow the user to log in.
+
+    if(usernamelogIn==usersdata[p].username && emailLogIn==usersdata[p].email)
+    {
+       displayAlert("Logged in successfully");
+    }
+    else{
+      displayAlert("Username or Email are incorrect");
+    }
+  }
+  
+  
+
 }
 
 
@@ -110,10 +132,10 @@ function logInEvent (){
 
 
 
-let message = "Account created!";
+let message;
 const alertBox = document.querySelector('.alert');
 const displayAlert = (message) => {
-  alertBox.innerText = message; // add the message into the alert box
+  alertBox.textContent = message; // add the message into the alert box
   alertBox.style.display = "block"; // make the alert box visible
   alertBox.style.backgroundColor = 'green'; 
   alertBox.style.color = 'white'; 
@@ -142,7 +164,8 @@ const displayAlert = (message) => {
             let user = {
                 id: document.getElementById('id').value,
                 title: document.getElementById('register').value,
-                uname: document.getElementById('Username').value
+                uname: document.getElementById('Username').value,
+                email: document.getElementById('email').value
             }
             userData.push(user);
             // document.forms[0].reset(); // to clear the form for the next entries
@@ -151,15 +174,16 @@ const displayAlert = (message) => {
             console.warn('added' , {userData} );
             
             //saving to localStorage
-            if(user.id !== "" || user.title !== "" || user.uname !== ""){
+            if(user.id !== "" || user.title !== "" || user.uname !== "" || user.email !== ""){
               localStorage.setItem('Users', JSON.stringify(userData) );
 
             }
+            displayAlert("Account created!");
             document.querySelector('#signupform').reset();
             
-            displayAlert(message);
         }
-        
+  //Event listeners
+      
   document.addEventListener('DOMContentLoaded', ()=>{
             // document.getElementById('signupbtn').addEventListener('click', (e)=>{
             //   e.preventDefault();
@@ -170,6 +194,11 @@ const displayAlert = (message) => {
               addUser();
               
               location.assign("../UI/books.html")
+          });
+
+          logInForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            validatelogIn();
           });
           
         });
