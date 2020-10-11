@@ -15,9 +15,6 @@ function myFunction() {
 }
 
 
-
-
-
 //Implementing Browser storage on sign up form
 
 
@@ -161,8 +158,78 @@ for (let i in usersdata) {
 
 
     // filter books
+    
   }
 }
+
+const forms = document.forms;
+const searchBar = forms['search-books'].querySelector('input');
+const list = document.querySelector('.all-books ul');
+searchBar.addEventListener('keyup', (e) => {
+  const term = e.target.value.toLowerCase();
+  const books = list.getElementsByTagName('li');
+  Array.from(books).forEach((book) => {
+    const title = book.firstElementChild.textContent;
+    if(title.toLowerCase().indexOf(term) != -1){
+      book.style.display = 'block';
+    } else {
+      book.style.display = 'none';
+    }
+  });
+});
+
+  // Add book to form
+  const addForm = forms['book-form'];
+  addForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    // create elements
+    const value = addForm.querySelector('input[type="text"]').value;
+    const li = document.createElement('li');
+    const bookImage = document.createElement('img')
+    bookImage.src= '../images/feature-books/psychology2.jpg';
+      // bookImage.width = '120px';
+      // bookImage.height = '160px';
+    const bookName = document.createElement('span');
+    const borrowBtn = document.createElement('span');
+    const deleteBtn = document.createElement('span');
+      
+
+        // add text content
+    bookName.textContent = value;
+    borrowBtn.textContent = 'Borrow';
+    deleteBtn.textContent = 'Delete';
+      
+
+        // add classes
+    bookImage.classList.add('image');
+    bookName.classList.add('title');
+    borrowBtn.classList.add('borrow');
+    deleteBtn.classList.add('delete-bk');
+
+        // add items to DOM
+    li.appendChild(bookImage)
+    li.appendChild(bookName);
+    li.appendChild(borrowBtn);
+    li.appendChild(deleteBtn);
+      
+    list.appendChild(li);
+
+  });
+
+  //delete book from libraray
+  list.addEventListener('click', (e) => {
+    if(e.target.className == 'delete-bk'){
+      const li = e.target.parentElement;
+      li.parentNode.removeChild(li);
+    }
+      // else if(e.target.className == 'borrow'){
+      //   const bookBorrowed = document.createElement('LI')
+      //   const
+      
+      // }
+  });
+
 
 function validatelogIn() {
 
@@ -215,7 +282,7 @@ const displayAlert = (message) => {
 //Create the different functionality for the three different users
 
 
-const list = document.querySelector('.all-books ul');
+// const list = document.querySelector('.all-books ul');
 // const forms = document.forms;
 const borrowCart = document.getElementById('Borrow');
 const bookLis = document.querySelector('.title').textContent;
