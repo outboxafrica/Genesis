@@ -142,7 +142,7 @@ for(let i in usersdata){
     // filter books
     const forms = document.forms;
     const searchBar = forms['search-books'].querySelector('input');
-    const list = document.querySelector('.col-books ul');
+    const list = document.querySelector('.all-books ul');
     searchBar.addEventListener('keyup', (e) => {
       const term = e.target.value.toLowerCase();
       const books = list.getElementsByTagName('li');
