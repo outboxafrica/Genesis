@@ -157,20 +157,20 @@ for (let i in usersdata) {
 }
 
 const forms = document.forms;
-    const searchBar = forms['search-books'].querySelector('input');
-    const list = document.querySelector('.all-books ul');
-    searchBar.addEventListener('keyup', (e) => {
-      const term = e.target.value.toLowerCase();
-      const books = list.getElementsByTagName('li');
-      Array.from(books).forEach((book) => {
-        const title = book.firstElementChild.textContent;
-        if(title.toLowerCase().indexOf(term) != -1){
-          book.style.display = 'block';
-        } else {
-          book.style.display = 'none';
-        }
-      });
-    });
+const searchBar = forms['search-books'].querySelector('input');
+const list = document.querySelector('.all-books ul');
+searchBar.addEventListener('keyup', (e) => {
+  const term = e.target.value.toLowerCase();
+  const books = list.getElementsByTagName('li');
+  Array.from(books).forEach((book) => {
+    const title = book.firstElementChild.textContent;
+    if(title.toLowerCase().indexOf(term) != -1){
+      book.style.display = 'block';
+    } else {
+      book.style.display = 'none';
+    }
+  });
+});
 
   // Add book to form
   const addForm = forms['book-form'];
@@ -182,44 +182,46 @@ const forms = document.forms;
     const li = document.createElement('li');
     const bookImage = document.createElement('img')
     bookImage.src= '../images/feature-books/psychology2.jpg';
-    // bookImage.width = '120px';
-    // bookImage.height = '160px';
+      // bookImage.width = '120px';
+      // bookImage.height = '160px';
     const bookName = document.createElement('span');
     const borrowBtn = document.createElement('span');
     const deleteBtn = document.createElement('span');
-    
+      
 
-      // add text content
+        // add text content
     bookName.textContent = value;
     borrowBtn.textContent = 'Borrow';
     deleteBtn.textContent = 'Delete';
-    
+      
 
-      // add classes
+        // add classes
     bookImage.classList.add('image');
     bookName.classList.add('title');
     borrowBtn.classList.add('borrow');
     deleteBtn.classList.add('delete-bk');
 
-      // append to DOM
+        // add items to DOM
     li.appendChild(bookImage)
     li.appendChild(bookName);
     li.appendChild(borrowBtn);
     li.appendChild(deleteBtn);
-    
+      
     list.appendChild(li);
+
   });
 
+  //delete book from libraray
   list.addEventListener('click', (e) => {
     if(e.target.className == 'delete-bk'){
       const li = e.target.parentElement;
       li.parentNode.removeChild(li);
     }
-    // else if(e.target.className == 'borrow'){
-    //   const bookBorrowed = document.createElement('LI')
-    //   const
-     
-    // }
+      // else if(e.target.className == 'borrow'){
+      //   const bookBorrowed = document.createElement('LI')
+      //   const
+      
+      // }
   });
 
 
