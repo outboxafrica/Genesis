@@ -2,7 +2,8 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #logo {
@@ -19,32 +20,33 @@
   max-width: 90px;
 }
 
-#nav-form form{
-    align-self: center;
-    padding: 20px;
+#nav-form form {
+  align-self: center;
+  padding: 20px;
 }
 
-#nav-form button, #nav-form input{
-    padding: 5px;
-    font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 1px solid #eee;
-    color: #444;
-
+#nav-form button,
+#nav-form input {
+  padding: 5px;
+  font-size: 1rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid #eee;
+  color: #444;
 }
-#nav-form button{
+#nav-form button {
   border-radius: 9px;
   padding: 7px 15px;
 }
 
-#nav-form input{
-    background-color: #ddd;
-    border-radius: 15px;
+#nav-form input {
+  background-color: #ddd;
+  border-radius: 15px;
 }
 
-#nav-form button:hover{
-    background-color: #ddd;
-    color: black;
+#nav-form button:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 #navbar {
@@ -52,8 +54,8 @@
   background-color: #51adcf;
   display: flex;
   justify-content: space-around;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #navbar ul {
@@ -77,11 +79,11 @@
   color: #eee;
 }
 
-#navbar ul li:hover{
+#navbar ul li:hover {
   border-bottom: 1px solid #ddd;
 }
 
-#navbar ul li a:hover{
+#navbar ul li a:hover {
   color: #444;
 }
 
@@ -99,7 +101,7 @@
   color: #eee;
 }
 
-#nav-form a:hover{
+#nav-form a:hover {
   color: #444;
 }
 
@@ -131,265 +133,254 @@
 .featured-books {
   width: 100%;
   height: 600px;
-  background-color: #FFFBFB;
+  background-color: #fffbfb;
 }
 
-#wrapper{
+#wrapper {
   width: 90%;
   max-width: 700px;
   margin: 80px auto;
   border-radius: 6px;
-  box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   padding: 20px;
   padding-bottom: 40px;
   overflow: hidden;
   border: 1px solid lightgray;
-  background-color: #FFFBFB;
+  background-color: #fffbfb;
   text-align: center;
 }
 
-#page-banner{
-  background: #eee ;
+#page-banner {
+  background: #eee;
   padding: 10px 0;
   margin: 10px 0;
   width: 100%;
   font-size: 30px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-#logIn{
+#logIn {
   margin: 20px;
   padding: 15px;
   padding-top: 30px;
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-#logIn input{
-    padding: 8px;
-    border: 1.5px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    color: #444;
-    margin: 10px;
+#logIn input {
+  padding: 8px;
+  border: 1.5px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #444;
+  margin: 10px;
 }
 
-#logIn button{
+#logIn button {
   cursor: pointer;
   margin: 10px;
   padding: 10px;
   border-radius: 4px;
   background-color: #3ba1b8;
-  color: #FFFBFB;
+  color: #fffbfb;
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-#wrapper #bottom-text{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+#wrapper #bottom-text {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   margin: 20px;
   padding: 10px;
 }
 
-#bottom-text a{
+#bottom-text a {
   color: #444;
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
-  #navbar{
+  #navbar {
     flex-direction: column;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
   }
 
-  #navbar ul{
+  #navbar ul {
     flex-direction: column;
   }
 
-  #nav-form{
+  #nav-form {
     text-align: center;
   }
 
-  #nav-form button{
+  #nav-form button {
     margin: 10px;
-    padding: .4rem 1rem;
-
+    padding: 0.4rem 1rem;
   }
 
-  #wrapper{
+  #wrapper {
     max-width: 400px;
   }
 
-  #logIn{
+  #logIn {
     text-align: center;
-    
   }
 }
 
 /*really small phones 350px and below*/
-@media screen and (max-width: 350px){
-  #wrapper{
+@media screen and (max-width: 350px) {
+  #wrapper {
     max-width: 280px;
   }
-  #logIn{
+  #logIn {
     padding: 0;
     margin: 0;
   }
 }
 
 /* Medium devices (portrait tablets and large phones, 600px and up) */
-@media screen and (min-width: 600px){
-  #wrapper{
+@media screen and (min-width: 600px) {
+  #wrapper {
     max-width: 500px;
   }
- 
 }
 
-
-
-
-body{
-    background-color: #EFEDED;
+body {
+  background-color: #efeded;
 }
 
-  
-  /* Style the buttons inside the tab */
-  .category button {
-    background-color: inherit;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-    font-size: 17px;
-  }
-  
-  /* Change background color of buttons on hover */
-  .category button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Create an active/current tablink class */
-  .category button.active {
-    background-color: #ccc;
-  }
-  
-  /* Style the tab content, the books in each category*/
-  .tabcontent {
-    display: none;
-    padding: 6px 12px;
-    /* border: 1px solid #ccc; */
-    border-top: none;
-  }
-
-  /* Style the tab */
-.category{
-    margin-top: 10px;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    text-align: center;
+/* Style the buttons inside the tab */
+.category button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-
-.books{
-    background-color: #EFEDED;
-    margin-top: 30px;
-} 
-
-.col-books{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-
+/* Change background color of buttons on hover */
+.category button:hover {
+  background-color: #ddd;
 }
 
-.col-books div{
-    flex-flow: row wrap;
+/* Create an active/current tablink class */
+.category button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content, the books in each category*/
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  /* border: 1px solid #ccc; */
+  border-top: none;
+}
+
+/* Style the tab */
+.category {
+  margin-top: 10px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.books {
+  background-color: #efeded;
+  margin-top: 30px;
+}
+
+.col-books {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col-books div {
+  flex-flow: row wrap;
 }
 
 .container {
-    position: relative;
-    width: 50%;
-  }
-
-.container img{
-    opacity: 1;
-    padding:30px;
-    cursor: pointer;
-    transition: .5s ease;
-    backface-visibility: hidden;
+  position: relative;
+  width: 50%;
 }
-.container:hover img{
-    opacity: 0.3;
-  }
+
+.container img {
+  opacity: 1;
+  padding: 30px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  backface-visibility: hidden;
+}
+.container:hover img {
+  opacity: 0.3;
+}
 
 .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    transform: translate(-50%, -50%);
-    /* -ms-transform: translate(-50%, -50%) */
+  transition: 0.5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%) */
 }
 
-
 .container:hover .middle {
-    opacity: 1;
+  opacity: 1;
 }
 
 .text {
-    background-color: #4c93af;
-    color: white;
-    font-size: 20px;
-    padding: 16px 32px;
-    cursor: pointer;
+  background-color: #4c93af;
+  color: white;
+  font-size: 20px;
+  padding: 16px 32px;
+  cursor: pointer;
 }
 
-.btn{
-    display: flex;
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.delete:hover {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+}
+
+.delete:disabled {
+  color: #444;
+}
+
+@media only screen and (min-width: 700px) {
+  .col-books {
+    /* flex-direction: column; */
     justify-content: center;
+    align-items: center;
+  }
 }
 
-
-
-.delete:hover{
-    background-color: #eee;
-    color: #444;
-    cursor: pointer;
-}
-
-.delete:disabled{
-    color: #444;
-}
-
-@media only screen and (min-width:700px){
-    .col-books{
-        /* flex-direction: column; */
-        justify-content: center;
-        align-items: center;
-    }
-}    
-   
 .feat-books {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: center;
   flex-wrap: wrap;
-  
-  
 }
-.book-item{
+.book-item {
   padding: 2rem;
   position: relative;
 }
@@ -398,132 +389,135 @@ body{
   height: 270px;
   opacity: 1;
   display: block;
-  transition: .5s ease;
+  transition: 0.5s ease;
   backface-visibility: hidden;
-
 }
-.book-item>div{
-  transition: .5s ease;
+.book-item > div {
+  transition: 0.5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+  -ms-transform: translate(-50%, -50%);
 }
-.book-item:hover img{
+.book-item:hover img {
   opacity: 0.3;
 }
 
 .book-item:hover #borrow-item {
   opacity: 1;
 }
-#borrow-book{
+#borrow-book {
   font-size: 16px;
   padding: 10px 20px;
-  color:aliceblue;
+  color: aliceblue;
   border-radius: 8px;
   background-color: rgb(51, 160, 233);
   cursor: pointer;
-} 
+}
 
-.footer{
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100px;
-  background-color: #C4C4C4;
+  background-color: #c4c4c4;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
-  
+  font-size: 13px;
 }
-.footer>div{
+.footer > div {
   padding: 15px;
 }
 
-#media-icons img{
+#media-icons img {
   display: inline-block;
   width: 1.4rem;
   height: 1.4rem;
   padding: 5px;
-  
 }
 
-
-
-@media only screen and (max-width: 650px){
-  .footer{
+@media only screen and (max-width: 650px) {
+  .footer {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
- /* Signup css start */
+/* Signup css start */
 #signup-form {
-	color: #999;
-	background: #e2e2e2;
-	font-family: 'Roboto', sans-serif;
+  color: #999;
+  background: #e2e2e2;
+  font-family: "Roboto", sans-serif;
 }
 .form-control {
-	min-height: 20px;
-	box-shadow: none;
-	border-color: #e1e1e1;
+  min-height: 20px;
+  box-shadow: none;
+  border-color: #e1e1e1;
 }
 .form-control:focus {
-	border-color:  #51adcf;
-}	
-.form-control, .btn {        
-	border-radius: 3px;
-} 
+  border-color: #51adcf;
+}
+.form-control,
+.btn {
+  border-radius: 3px;
+}
 .form-header {
-	margin: -30px -30px 20px;
-	padding: 30px 30px 10px;
-	text-align: center;
-	background:  #51adcf;
-	border-bottom: 1px solid #eee;
-	color: #fff;
+  margin: -30px -30px 20px;
+  padding: 30px 30px 10px;
+  text-align: center;
+  background: #51adcf;
+  border-bottom: 1px solid #eee;
+  color: #fff;
 }
 .form-header h2 {
-	font-size: 34px;
-	font-weight: bold;
-	margin: 0 0 10px;
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0 0 10px;
   /* font-family: 'Pacifico', sans-serif; */
   font-family: inherit;
 }
 .form-header p {
-	margin: 20px 0 15px;
-	font-size: 17px;
-	line-height: normal;
+  margin: 20px 0 15px;
+  font-size: 17px;
+  line-height: normal;
   /* font-family: 'Courgette', sans-serif; */
   font-family: inherit;
 }
 .signup-form {
-	width: 550px;
-	margin: 0 auto;	
-	padding: 50px 0;	
+  width: 550px;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 .signup-form form {
-	color: #999;
+  color: #999;
   border-radius: 3px;
-  
-	margin-bottom: 15px;
-	background: #f0f0f0;
-	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-	padding: 30px;
+
+  margin-bottom: 15px;
+  background: #f0f0f0;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 30px;
 }
 .signup-form .form-group {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 /* Full-width input fields */
-.form-group input[type=text], .form-group input[type=password], .form-group select {
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
   width: 90%;
   padding: 15px;
   margin: 3px 0 22px 0;
   display: inline-block;
   border: none;
-  
 }
 
-.form-group input[type=text]:focus, .form-group input[type=password]:focus {
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -534,7 +528,7 @@ hr {
 }
 
 .form-group.success input {
-	border-color: #2ecc71;
+  border-color: #2ecc71;
 }
 
 .form-group.error input {
@@ -542,17 +536,16 @@ hr {
 }
 
 .form-group small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
 }
 
 .form-group.error small {
-	visibility: visible;
+  visibility: visible;
 }
-
 
 /* Set a style for all buttons */
 .signupbtn {
@@ -566,11 +559,10 @@ hr {
 }
 
 .signupbtn:hover {
-  opacity:1;
+  opacity: 1;
 }
 
 /* Extra styles for the cancel button */
-
 
 /* Float cancel and signup buttons and add an equal width */
 .signupbtn {
@@ -592,7 +584,74 @@ hr {
 
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
+  .cancelbtn,
+  .signupbtn {
     width: 100%;
   }
+}
+
+/* All books pages */
+#add-book{
+  margin-left: 200px;
+  padding: 20px;
+}
+#add-book input[type="text"]{
+  padding: 6px;
+  border-radius: 4px;
+  
+}
+#add-book button{
+  padding: 6px;
+  border-radius: 5px;
+  background: rgb(12, 141, 141);
+  color: aliceblue;
+  cursor: pointer;
+}
+#add-book button:hover{
+  background: rgb(24, 42, 70);
+}
+.all-books {
+  width: 75%;
+  box-sizing: border-box;
+  background-color: #EFEDED;
+  box-shadow: 0px 1px 6px #EFEDED;
+  border-radius: 7px;
+  margin: 20px 150px 25px 330px;
+}
+.borrow,
+.delete-bk {
+  display: block;
+}
+
+.all-books ul {
+  list-style-type: none;
+  padding-left: 30px;
+  margin: 0 auto;
+}
+
+.all-books li {
+  padding: 10px 0 20px 0;
+  display: flex;
+  flex-direction: row;
+}
+.all-books .title {
+  width: 50%;
+  padding: 10px;
+  
+  
+}
+.borrow,
+.delete-bk {
+  padding: 6px;
+  color: aliceblue;
+  background: rgb(12, 141, 141);
+  margin: 15px;
+  width: 55px;
+  height: 23px;
+  border-radius: 5px;
+  cursor: pointer;
+  border:1px solid  rgb(24, 42, 70);
+}
+.borrow:hover, .delete-bk:hover{
+  background: rgb(24, 42, 70);
 }

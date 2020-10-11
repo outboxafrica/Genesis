@@ -93,8 +93,25 @@ function openCategory(event, category) {
   //Sign up form Validation -- TO BE DONE BY HANNAH
 
 //Create the different functionality for the three different users
+document.addEventListener('DOMContentLoaded', function(){
+
+  const list = document.querySelector('.all-books ul');
+  // const forms = document.forms;
+
+  // delete books
+  list.addEventListener('click', (e) => {
+    if(e.target.className == 'delete-bk'){
+      const li = e.target.parentElement;
+      li.parentNode.removeChild(li);
+    }
+    if(e.target.className == 'borrow'){
+      const borrowBtn = document.querySelector('.borrow')
+      borrowBtn.disabled = true;
+    }
+  });
 
 
+})
 //Authenticity for the log in form
  //A loop may be needed to loop over the data in the cache and return a match 
  
