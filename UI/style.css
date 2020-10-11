@@ -430,7 +430,7 @@ body {
 }
 #tabbed-content ul {
   list-style-type: none;
-  padding: 0;
+  
 }
 #tabbed-content li{
   display: inline-block;
@@ -604,7 +604,7 @@ body {
   transition: 0.5s ease;
   backface-visibility: hidden;
 }
-/* .book-item .borrow-item{
+.book-item .borrow-item{
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -612,15 +612,15 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%)
-} */
+}
 
-/* .book-item:hover img{
+.book-item:hover img{
   opacity: 0.3;
-} */
+}
 
-/* .book-item:hover .borrow-item {
+.book-item:hover .borrow-item {
   opacity: 1;
-} */
+}
 
 
 .book-item>span>button{
@@ -636,17 +636,19 @@ body {
 }
 
 .footer {
-  /* position: fixed; */
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  /* height: 100px; */
   background-color: #c4c4c4;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   font-size: 13px;
+  padding-top: 0;
+
 }
 .footer > div {
   padding: 15px;
@@ -725,8 +727,7 @@ body {
   margin-bottom: 20px;
 }
 /* Full-width input fields */
-.form-group input[type="text"],
-.form-group input[type="password"],
+.form-group input,
 .form-group select {
   width: 90%;
   padding: 15px;
@@ -811,23 +812,23 @@ hr {
 }
 
 /* All books pages */
-#add-book{
+#book-form{
   margin-left: 200px;
   padding: 20px;
 }
-#add-book input[type="text"]{
+#book-form input[type="text"]{
   padding: 6px;
   border-radius: 4px;
   
 }
-#add-book button{
+#book-form button{
   padding: 6px;
   border-radius: 5px;
   background: rgb(12, 141, 141);
   color: aliceblue;
   cursor: pointer;
 }
-#add-book button:hover{
+#book-form button:hover{
   background: rgb(24, 42, 70);
 }
 .all-books {
@@ -837,6 +838,10 @@ hr {
   box-shadow: 0px 1px 6px #EFEDED;
   border-radius: 7px;
   margin: 20px 150px 25px 330px;
+}
+.image{
+  width: 120px;
+  height: 160px;
 }
 .borrow,
 .delete-bk {
