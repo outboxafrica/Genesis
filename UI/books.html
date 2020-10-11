@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="../images/favicon.ico"
+      type="image/x-icon"
+    />
 
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <title>BOOKS</title>
+    <title>The Library-all books</title>
+  
   </head>
   <body>
     <!--Navigation bar-->
@@ -56,6 +61,39 @@
 
     
 
+    <div class="all-books">
+      <h2 style="padding: 25px; margin-left: 270px;" >All books</h2>
+      <form id="add-book">
+        <input type="text" placeholder="Add a new book">
+        <button>Add Book</button>
+      </form>
+      <ul>
+        <li>
+          <span class="title">Fundamentals of engineering</span>
+          <span class="borrow">Borrow</span>
+          <span class="delete-bk">Delete</span>
+        </li>
+
+        <li>
+          <span class="title">Get in touch with the inner you</span>
+          <span class="borrow">Borrow</span>
+          <span class="delete-bk">Delete</span>
+        </li>
+
+        <li>
+          <span class="title">Book Title</span>
+          <span class="borrow">Borrow</span>
+          <span class="delete-bk">Delete</span>
+        </li>
+
+        <li>
+          <span class="title">Book Title</span>
+          <span class="borrow">Borrow</span>
+          <span class="delete-bk">Delete</span>
+        </li>
+      </ul>
+    </div>
+
     <div id="tabbed-content">
       <ul class="tabs">
         <li data-target="#Borrow" class="active">Borrowed Books</li>
@@ -70,6 +108,27 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id nunc porta urna ornare rhoncus. Ut convallis ante at.</p>
       </div>
     </div>
+   
+
+    <section class="footer">
+      <div id="address" style="padding-top: 20px;">
+          <p>
+              Address
+              <br>Plot 23 and 24
+              <br>Kampala road
+          </p>
+      </div>
+      <div style="padding-top: 40px;">
+          <p>Copyright &#169 Thelibrary.org</p>
+      </div>
+      <div id="media-icons" style="padding-top: 30px">
+          <a href="https://www.facebook.com"><img src="../images/facebook.svg" alt="facebook"></a>
+          <a href="https://www.twitter.com"><img src="../images/twitter.svg" alt="twitter"></a>
+          <a href="www.instagram.com"><img src="../images/instagram.svg" alt="instagram"></a>
+
+      </div>
+      
+    </section>
 
     <script src="../scripts/app.js"></script>
   </body>
