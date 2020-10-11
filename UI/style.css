@@ -12,7 +12,6 @@
   background-color: #51adcf;
 }
 
-
 .topnav a {
   display: flex;
   color: #f2f2f2;
@@ -31,10 +30,10 @@
   color: black;
 }
 
-.toggle{
+.toggle {
   color: #f2f2f2;
 }
-.toggle:hover{
+.toggle:hover {
   background-color: #ddd;
   color: black;
 }
@@ -44,7 +43,7 @@
   color: white;
 } */
 
-#img{
+#img {
   width: 40px;
   height: 35px;
 }
@@ -53,19 +52,16 @@
   display: none;
 }
 
-.active-search{
-  
+.active-search {
   padding: 5px;
   border-radius: 4px;
   border: 1px solid #ddd;
   display: flex;
   align-self: center;
-
 }
-.topnav span a:hover{
+.topnav span a:hover {
   color: #444;
 }
-
 
 /* @media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
@@ -87,7 +83,6 @@
   }
 } */
 
-
 #logo {
   display: flex;
   flex-direction: row;
@@ -106,15 +101,6 @@
   align-self: center;
   padding: 20px;
 }
-
-/* #nav-form input{
-    padding: 5px;
-    font-size: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border: 1px solid #eee;
-    color: #444;
-    background-color: #ddd;
-    border-radius: 15px; */
 
 #nav-form button,
 #nav-form input {
@@ -180,7 +166,6 @@
   color: #444;
 }
 
-
 #nav-form {
   padding: 10px;
   display: flex;
@@ -227,7 +212,7 @@
 .featured-books {
   width: 100%;
   height: 520px;
-  background-color: #FFFBFB;
+  background-color: #fffbfb;
 }
 
 #wrapper {
@@ -308,8 +293,7 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media screen and (max-width: 600px) {
-  
-  #navbar{
+  #navbar {
     display: none;
     /* flex-direction: column;
     flex-wrap: wrap;
@@ -318,14 +302,16 @@
     align-items: center;  */
   }
 
-  .topnav{
+  .topnav {
     display: flex;
     padding-left: 5px;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
   }
 
-  .topnav a{display: none;}
+  .topnav a {
+    display: none;
+  }
   .topnav a.toggle {
     /* float: right; */
     display: flex;
@@ -350,49 +336,46 @@
     justify-content: center;
   }
 
-  #mobile-logo{
+  #mobile-logo {
     display: flex;
   }
-.topnav span a{
-  display: flex;
-} 
- 
+  .topnav span a {
+    display: flex;
+  }
 
   /* #links{
     flex-direction: column;
     display: none;
   } */
 
-  #nav-form{
+  #nav-form {
     text-align: center;
   }
 
-  
-
-  #wrapper{
+  #wrapper {
     max-width: 400px;
   }
 
   #logIn {
     text-align: center;
   }
-  #intro{
+  #intro {
     padding: 30px 10px 10px 10px;
     width: 250px;
     height: 150px;
+    position: relative;
   }
-  #intro h2{
+  #intro h2 {
     font-size: 1.5rem;
   }
-  #intro p{
+  #intro p {
     font-size: 1rem;
-    padding: 1rem 0 0 .3rem;
-
+    padding: 1rem 0 0 0.3rem;
   }
-  #home-section{
+  #home-section {
     height: 400px;
   }
-  #links.active{
+  #links.active {
     display: flex;
   }
 }
@@ -419,6 +402,16 @@ body {
   background-color: #efeded;
 }
 
+/* Style the buttons inside the tab */
+.category button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
 
 
 /* body{
@@ -563,6 +556,15 @@ body {
   justify-content: center;
 }
 
+.delete {
+  background-color: rgb(96, 96, 248);
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #eee;
+  border-radius: 4px;
+}
+
 .delete:hover {
   background-color: #eee;
   color: #444;
@@ -588,7 +590,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
-.book-item{
+.book-item {
   list-style-type: none;
   padding: 2rem;
   position: relative;
@@ -619,8 +621,7 @@ body {
   opacity: 1;
 } */
 
-
-.book-item>span>button{
+.book-item > span > button {
   font-size: 13px;
 }
 #borrow-book {
@@ -640,6 +641,7 @@ body {
   height: 100px;
   background-color: #c4c4c4;
   display: flex;
+  
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -647,6 +649,7 @@ body {
 }
 .footer > div {
   padding: 15px;
+  flex-shrink: 0;
 }
 
 #media-icons img {
@@ -764,7 +767,9 @@ hr {
 }
 
 /* Set a style for all buttons */
-.signupbtn {
+
+/* Set a style for sign up buttons */
+.signup-form button {
   background-color: #51adcf;
   color: white;
   padding: 14px 20px;
@@ -774,7 +779,7 @@ hr {
   opacity: 0.9;
 }
 
-.signupbtn:hover {
+.signup-form button:hover {
   opacity: 1;
 }
 
