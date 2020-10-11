@@ -8,51 +8,61 @@
       href="https://fonts.googleapis.com/css?family=Roboto|Courgette|Pacifico:400,700"
     />
     <title>The Library</title>
-   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-
+       <link rel="stylesheet" href="style.css" />
+       <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+   
+       
+<body>
+  <nav id="navbar">
+    <div id="logo">
+      <img id="img-logo" src="../images/books.png" alt="LOGO" />
+    </div>
+    <div id="links">
+      <ul>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="#genres">Genres</a></li>
+        <li><a href="#support">Support</a></li>
+      </ul>
+    </div>
+    <div id="nav-form">
+      <a href="log-in.html">Log In</a>
+      <form>
+        <input type="text" placeholder="Search.." />
+      </form>
+    </div>
+  </nav>
     <div class="signup-form">
-      <form id="form" name="signup-form">
-        <div class="form-header">
-          <h2>Sign Up</h2>
-          <p>Fill out this form to sign up</p>
-        </div>
-        <div class="form-group">
-          <label for="name"><b>Username</b></label>
-          <input
-            type="text"
-            placeholder="Enter Username"
-            id="Username"
-            name="Username"
-          />
-          <small>Error message</small>
-        </div>
-        <div class="form-group">
-          <label for="email"><b>Email</b></label>
-          <input
-            type="text"
-            placeholder="Enter Email"
-            id="email"
-            name="email"
-          />
-          <small>Error message</small>
-        </div>
-        <div class="form-group">
-          <label for="register"><b>Register as:</b></label>
+        <div class="alert"></div>
+        <form id="signupform" name="signupform" action="../UI/books.html" >
+            <div class="form-header">
+                <h2>Sign Up</h2>
+                <p>Fill out this form to sign up</p>
+            </div>
+            <div class="form-group">
+                <label for="email"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" id="Username" name="Username" onChange="userValid()" required>
+          <div id="err1"></div>
+            </div>
+            <div class="form-group">
+                <label for="email"><b>Email</b></label>
+    <input type="email" placeholder="Enter Email" name="email" id="email" onChange="emailValid()" required>
+            </div>
+            <div class="form-group">
+                <label for="register"><b>Register as:</b></label>
 
-          <select name="register" id="register">
-            <option value="EDU LF">EDU LF</option>
-            <option value="EDU Staff">EDU Staff</option>
+
+          <select name="register" id="register" onChange="myID()">
             <option value="EDU student">EDU student</option>
+            <option value="EDU Staff">EDU Staff</option>
+            <option value="EDU LF">EDU LF</option>
           </select>
         </div>
         <div class="form-group">
           <label for="id"><b>Enter Id</b></label
           ><br />
-          <input type="text" id="id" placeholder="Enter Id" name="id" />
-          <small>Error message</small>
+          <input type="text" id="id" placeholder="Enter Id" name="id" maxlength="5" onChange="idValid()" required/>
+          <div id="err4"></div>
         </div>
         <div class="form-group">
           <label for="psw"><b>Password</b></label>
@@ -61,28 +71,31 @@
             id="psw"
             placeholder="Enter Password"
             name="psw"
+            onChange="passValid()"
+            required
           />
-          <small>Error message</small>
+          <div id="err2"></div>
         </div>
         <div class="form-group">
           <label for="psw-repeat"><b>Confirm Password</b></label>
           <input
             type="password"
-            id="psw2"
+            id="cpsw"
             placeholder="Confirm Password"
-            name="psw-repeat"
+            name="cpsw"
+            onChange="passMatch()"
+            required
           />
-          <small>Error message</small>
+          <div id="err3"></div>
         </div>
         <div class="form-group">
-          <label>
-            <input
+          <input
+              id="save"
               type="checkbox"
-              name="remember"
-              style="margin-bottom: 15px"
+              name="save"
+              style="margin-bottom: 15px; width: 10px;"
             />
-            Remember me
-          </label>
+            <label style="color: black;">Remember me</label>
         </div>
         <p>
           By creating an account you agree to our
@@ -90,11 +103,14 @@
         </p>
 
         <div class="clearfix">
-          <button type="submit" class="signupbtn">Sign Up</button>
+          <button type="submit" id="signupbtn" class="signupbtn">Sign Up</button>
         </div>
+    
       </form>
     </div>
-    
+
     <script src="../scripts/app.js"></script>
-</body>
+  </body>
 </html>
+
+
