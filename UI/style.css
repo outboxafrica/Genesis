@@ -113,6 +113,7 @@
 }
 #nav-form button {
   border-radius: 9px;
+  margin-top: 5px;
   padding: 7px 15px;
 }
 
@@ -194,7 +195,7 @@
 
 #intro {
   position: absolute;
-  top: 50%;
+  top: 100%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(70, 68, 68, 0.6);
@@ -634,7 +635,6 @@ body {
 }
 
 .footer {
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -876,4 +876,100 @@ hr {
 }
 .borrow:hover, .delete-bk:hover{
   background: rgb(24, 42, 70);
+}
+/*SUPPORT PAGE */
+#support-contact{
+  background-image: url("https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  background-size: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.support-detail{
+  padding: 5px 20px;
+  color:rgb(178, 182, 189);
+}
+
+.support-detail:hover{
+  color:#51adcf;
+}
+
+.slideshow-container{
+  max-width: 1000px;
+  text-align: center;
+  position: relative;
+  margin: 10rem;
+}
+.myslide{
+  padding:10px;
+  display: none;
+}
+.fade{
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+.dot:active{
+  background-color: #717171;
+
+}
+
+@media screen and (min-width:600px){
+#support-contact{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 }
