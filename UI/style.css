@@ -950,8 +950,23 @@ hr {
   
   }
 }
-/*SUPPORT PAGE */
+
 #support-contact{
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.support-section{
+  padding: 10px 20px;
+}
+.support-section p{
+  padding: 10px;
+}
+/*SUPPORT PAGE */
+/* #support-contact{
   background-image: url("https://images.unsplash.com/photo-1517411032315-54ef2cb783bb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
   background-size: auto;
   text-align: center;
@@ -991,7 +1006,7 @@ hr {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
-}
+} */
 
 .prev, .next {
   cursor: pointer;
