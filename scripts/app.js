@@ -1,10 +1,18 @@
-
-
 //Variables -- MOST VARIABLES SHOULD BE DECLARED HERE
 const signUpForm = document.getElementById('signupform');
 const logInButton = document.getElementById('btn-log-in');
 const logInForm = document.getElementById('logIn');
+const borrowBtn = document.querySelector('.borrow');
+const list = document.querySelector('.all-books ul');
 
+
+
+
+
+
+//Functions
+
+//Mobile Navbar
 function myFunction() {
   var x = document.getElementById("myTopnav");
   if (x.className === "topnav") {
@@ -14,14 +22,7 @@ function myFunction() {
   }
 }
 
-
-//Implementing Browser storage on sign up form
-
-
-
-
-//Functions
-// //Signup form validation
+ //Signup form validation
 
 function userValid() {
   var pat2 = /(?=.*[ A-Za-z0-9_@./#&+-])(?=.{5,})/;
@@ -49,6 +50,57 @@ function emailValid() {
   }
 }
 
+function passValid() {
+  var pat3 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
+  var passPat = pat3.exec(signupform.psw.value);
+  if (passPat == null) {
+    document.getElementById('err2').innerHTML = "Password should contain at least one number, symbol, uppercase and lowercase letter";
+    // document.getElementById('err2').style.display = "block";
+
+  }
+  else {
+    document.getElementById('err2').innerHTML = "";
+    document.getElementById('err2').style.display = "none";
+  }
+}
+function passMatch() {
+  var pass1 = signupform.psw.value;
+  var pass2 = signupform.cpsw.value;
+  if (pass1 != pass2) {
+    document.getElementById('err3').textContent = "Passwords do not match!";
+  }
+  else {
+    document.getElementById('err3').textContent = "";
+    document.getElementById('err3').style.display = "none";
+
+  }
+}
+function idValid() {
+  var pat4 = /^[0-9]{1,4}$/;
+  var idpat = pat4.exec(signupform.id.value);
+  if (idpat == null) {
+    document.getElementById('err4').textContent = "ID contains numbers only";
+  }
+  else {
+    document.getElementById('err4').textContent = "";
+  }
+}
+
+function myID() {
+  var select = document.getElementById("register").value;
+  var idInput = document.getElementById("id");
+  if (select == 'EDU Staff') {
+    idInput.setAttribute('maxlength', '1');
+  }
+  else if (select == 'EDU LF') {
+    idInput.setAttribute('maxlength', '2');
+  }
+  else if (select == 'EDU student') {
+    idInput.setAttribute('maxlength', '3');
+  }
+}
+
+
 const tabs = document.querySelector('.tabs');
 const panels = document.querySelectorAll('.panel');
 tabs.addEventListener('click', (e) => {
@@ -72,7 +124,7 @@ searchBar.addEventListener('keyup', (e) => {
   const term = e.target.value.toLowerCase();
   const books = bookList.getElementsByTagName('li');
   Array.from(books).forEach((book) => {
-    const title = book.firstElementChild.textContent;
+    const title = book.children[1].textContent;
     if (title.toLowerCase().indexOf(term) != -1) {
       book.style.display = 'flex';
     } else {
@@ -81,69 +133,71 @@ searchBar.addEventListener('keyup', (e) => {
   });
 
 });   
-// const borrowBtn = document.querySelector('.borrow');
-//  borrowBtn.addEventListener('click', ()=>{
-  // p.textContent = value;
-  // p.classList.add('name');
 
 
+const addForm = forms['book-form'];
+addForm.addEventListener('submit', function(e){
+  e.preventDefault();
 
- 
-function passValid() {
-    var pat3 = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})/;
-    var passPat = pat3.exec(signupform.psw.value);
-    if (passPat == null) {
-      document.getElementById('err2').innerHTML = "Password should contain at least one number, symbol, uppercase and lowercase letter";
-      // document.getElementById('err2').style.display = "block";
+  // create elements
+  const value = addForm.querySelector('input[type="text"]').value;
+  const li = document.createElement('li');
+  const bookImage = document.createElement('img')
+  bookImage.src= '../images/feature-books/psychology2.jpg';
+    // bookImage.width = '120px';
+    // bookImage.height = '160px';
+  const bookName = document.createElement('span');
+  const borrowBtn = document.createElement('span');
+  const deleteBtn = document.createElement('span');
+    
 
-    }
-    else {
-      document.getElementById('err2').innerHTML = "";
-      document.getElementById('err2').style.display = "none";
-    }
+      // add text content
+  bookName.textContent = value;
+  borrowBtn.textContent = 'Borrow';
+  deleteBtn.textContent = 'Delete';
+    
+
+      // add classes
+  bookImage.classList.add('image');
+  bookName.classList.add('title');
+  borrowBtn.classList.add('borrow');
+  deleteBtn.classList.add('delete-bk');
+
+      // add items to DOM
+  li.appendChild(bookImage)
+  li.appendChild(bookName);
+  li.appendChild(borrowBtn);
+  li.appendChild(deleteBtn);
+    
+  list.appendChild(li);
+
+});
+
+const borrowCart = document.getElementById('Borrow');
+const bookLis = document.querySelector('.title').textContent;
+// delete books
+list.addEventListener('click', (e) => {
+  if (e.target.className == 'delete-bk') {
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
   }
-function passMatch() {
-    var pass1 = signupform.psw.value;
-    var pass2 = signupform.cpsw.value;
-    if (pass1 != pass2) {
-      document.getElementById('err3').textContent = "Passwords do not match!";
-    }
-    else {
-      document.getElementById('err3').textContent = "";
-      document.getElementById('err3').style.display = "none";
+  else if (e.target.className == 'borrow') {
+    const div = document.createElement('div');
+    const p = document.createElement('p')
+    // bookLis.forEach((item)=>{
+    //   item.innerHTML = span.innerHTML;
+    // });
+    p.textContent = bookLis + "  ";
+    p.classList.add('cart');
+    div.appendChild(p);
+    
+    borrowCart.appendChild(div);
 
-    }
   }
-function idValid() {
-    var pat4 = /^[0-9]{1,4}$/;
-    var idpat = pat4.exec(signupform.id.value);
-    if (idpat == null) {
-      document.getElementById('err4').textContent = "ID contains numbers only";
-    }
-    else {
-      document.getElementById('err4').textContent = "";
-    }
-  }
-
-function myID() {
-    var select = document.getElementById("register").value;
-    var idInput = document.getElementById("id");
-    if (select == 'EDU Staff') {
-      idInput.setAttribute('maxlength', '1');
-    }
-    else if (select == 'EDU LF') {
-      idInput.setAttribute('maxlength', '2');
-    }
-    else if (select == 'EDU student') {
-      idInput.setAttribute('maxlength', '3');
-    }
-  }
+});
 
 
-
-	
-
-
+//Retrieving data from local storage
 let usersdata = JSON.parse(localStorage.getItem('Users'));
 console.log(usersdata);
 
@@ -163,46 +217,7 @@ console.log(usersdata);
 // }
 
 
-  // Add book to form
-  const addForm = forms['book-form'];
-  addForm.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    // create elements
-    const value = addForm.querySelector('input[type="text"]').value;
-    const li = document.createElement('li');
-    const bookImage = document.createElement('img')
-    bookImage.src= '../images/feature-books/psychology2.jpg';
-      // bookImage.width = '120px';
-      // bookImage.height = '160px';
-    const bookName = document.createElement('span');
-    const borrowBtn = document.createElement('span');
-    const deleteBtn = document.createElement('span');
-      
-
-        // add text content
-    bookName.textContent = value;
-    borrowBtn.textContent = 'Borrow';
-    deleteBtn.textContent = 'Delete';
-      
-
-        // add classes
-    bookImage.classList.add('image');
-    bookName.classList.add('title');
-    borrowBtn.classList.add('borrow');
-    deleteBtn.classList.add('delete-bk');
-
-        // add items to DOM
-    li.appendChild(bookImage)
-    li.appendChild(bookName);
-    li.appendChild(borrowBtn);
-    li.appendChild(deleteBtn);
-      
-    list.appendChild(li);
-
-  });
-
-  //delete book from libraray
+ 
   
 
 function validatelogIn() {
@@ -256,30 +271,7 @@ const displayAlert = (message) => {
 //Create the different functionality for the three different users
 
 
-// const list = document.querySelector('.all-books ul');
 // const forms = document.forms;
-const borrowCart = document.getElementById('Borrow');
-const bookLis = document.querySelector('.title').textContent;
-// delete books
-list.addEventListener('click', (e) => {
-  if (e.target.className == 'delete-bk') {
-    const li = e.target.parentElement;
-    li.parentNode.removeChild(li);
-  }
-  else if (e.target.className == 'borrow') {
-    const div = document.createElement('div');
-    const p = document.createElement('p')
-    // bookLis.forEach((item)=>{
-    //   item.innerHTML = span.innerHTML;
-    // });
-    p.textContent = bookLis + "  ";
-    p.classList.add('cart');
-    div.appendChild(p);
-    
-    borrowCart.appendChild(div);
-
-  }
-});
 
 
 
