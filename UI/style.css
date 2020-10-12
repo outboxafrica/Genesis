@@ -468,7 +468,7 @@ p:nth-child(even).cart{
   
   /* Style the tab content, the books in each category*/
   .tabcontent {
-    display: none;
+    /* visibility: hidden; */
     padding: 6px 12px;
     /* border: 1px solid #ccc; */
     border-top: none;
@@ -494,13 +494,6 @@ p:nth-child(even).cart{
   background-color: #ccc;
 }
 
-/* Style the tab content, the books in each category*/
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  /* border: 1px solid #ccc; */
-  border-top: none;
-}
 
 /* Style the tab */
 .category {
@@ -509,6 +502,7 @@ p:nth-child(even).cart{
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   text-align: center;
+  /* display: flex; */
 }
 
 .books {
