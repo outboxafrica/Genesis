@@ -148,35 +148,20 @@ let usersdata = JSON.parse(localStorage.getItem('Users'));
 console.log(usersdata);
 
 //Add, delete and borrow features
-for (let i in usersdata) {
-  if (usersdata[i].id <= 20) {
-    //add and delete buttons should be enabled
+// for (let i in usersdata) {
+//   if (usersdata[i].id <= 20) {
+//     //add and delete buttons should be enabled
 
-  }
-  else if (usersdata[i].id < 1000 && usersdata[i].title !== "Other") {
-    //Borrow and search features should be enabled
+//   }
+//   else if (usersdata[i].id < 1000 && usersdata[i].title !== "Other") {
+//     //Borrow and search features should be enabled
 
 
-    // filter books
+//     // filter books
     
-  }
-}
+//   }
+// }
 
-const forms = document.forms;
-const searchBar = forms['search-books'].querySelector('input');
-const list = document.querySelector('.all-books ul');
-searchBar.addEventListener('keyup', (e) => {
-  const term = e.target.value.toLowerCase();
-  const books = list.getElementsByTagName('li');
-  Array.from(books).forEach((book) => {
-    const title = book.firstElementChild.textContent;
-    if(title.toLowerCase().indexOf(term) != -1){
-      book.style.display = 'block';
-    } else {
-      book.style.display = 'none';
-    }
-  });
-});
 
   // Add book to form
   const addForm = forms['book-form'];
@@ -218,18 +203,7 @@ searchBar.addEventListener('keyup', (e) => {
   });
 
   //delete book from libraray
-  list.addEventListener('click', (e) => {
-    if(e.target.className == 'delete-bk'){
-      const li = e.target.parentElement;
-      li.parentNode.removeChild(li);
-    }
-      // else if(e.target.className == 'borrow'){
-      //   const bookBorrowed = document.createElement('LI')
-      //   const
-      
-      // }
-  });
-
+  
 
 function validatelogIn() {
 
@@ -325,7 +299,7 @@ const addUser = () => {
     email: document.getElementById('email').value
   }
   userData.push(user);
-  // document.forms[0].reset(); // to clear the form for the next entries
+   signUpForm.reset(); // to clear the form for the next entries
 
   //for display purposes only
   console.warn('added', { userData });

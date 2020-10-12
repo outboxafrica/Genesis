@@ -829,14 +829,17 @@ hr {
 
 /* All books pages */
 #add-book{
-  
+  display: flex;
   padding: 20px;
+  justify-content: center;
+  align-items: center;
 }
 #add-book input{
   padding: 6px;
   border-radius: 4px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
+  justify-content: center;
 }
 
 #add-book button{
@@ -846,6 +849,8 @@ hr {
   color: aliceblue;
   cursor: pointer;
   border: 1px solid;
+  justify-content: center;
+  align-self: start;
 }
 
 #add-book button:hover{
@@ -922,15 +927,22 @@ hr {
 
 @media screen and (max-width: 600px){
   .all-books{
-    width: 70%;
+    width: 80%;
   }
-
+  .borrow,
+  .delete-bk{
+    flex-wrap: wrap;
+  }
   .all-books li {
     padding: 10px;
     flex-wrap: wrap;
+    flex-direction: column;
    
   }
-  
+  #add-book{
+    justify-content: center;
+  }
+
   .all-books .title {
   
     padding: 5px;
