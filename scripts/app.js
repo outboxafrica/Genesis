@@ -143,6 +143,7 @@ addForm.addEventListener('submit', function(e){
   const value = addForm.querySelector('input[type="text"]').value;
   const li = document.createElement('li');
   const bookImage = document.createElement('img')
+  localStorage.setItem('Books', value);
   bookImage.src= '../images/feature-books/psychology2.jpg';
     // bookImage.width = '120px';
     // bookImage.height = '160px';
