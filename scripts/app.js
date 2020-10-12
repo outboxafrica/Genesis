@@ -116,31 +116,31 @@ const list = document.querySelector('.all-books ul');
 //   }
 // });
 
-// function openCategory(event, category) {
-//   // Declare all variables
-//   var i, tabcontent, tablinks;
-//   // Get all elements with class="tabcontent" and hide them
-//   tabcontent = document.getElementsByClassName("tabcontent");
-//   for (i = 0; i < tabcontent.length; i++) {
-//     tabcontent[i].style.display = "none";
+function openCategory(event, category) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
 
-//   }
+  }
 
-//   // Get all elements with class="tablinks" and remove the class "active"
-//   tablinks = document.getElementsByClassName("tablinks");
-//   for (i = 0; i < tablinks.length; i++) {
-//     tablinks[i].className = tablinks[i].className.replace(" active", "");
-//   }
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
 
-//   // Show the current tab, and add an "active" class to the button that opened the tab
-//   document.getElementById(category).style.display = "flex"; 
-//   // document.getElementById(category).style.visibility = "visible"; 
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(category).style.display = "flex"; 
+  // document.getElementById(category).style.visibility = "visible"; 
 
-//   event.currentTarget.className += " active";
-// }
+  event.currentTarget.className += " active";
+}
 
-// // Get the element with id="defaultOpen" and click on it
-// document.getElementById("defaultOpen").click();
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 
 // filter books
 const forms = document.forms;
@@ -200,28 +200,28 @@ addForm.addEventListener('submit', function(e){
 
 });
 
-// const borrowCart = document.getElementById('Borrow');
-// const bookLis = document.querySelector('.title').textContent;
-// // delete books
-// list.addEventListener('click', (e) => {
-//   if (e.target.className == 'delete-bk') {
-//     const li = e.target.parentElement;
-//     li.parentNode.removeChild(li);
-//   }
-//   else if (e.target.className == 'borrow') {
-//     const div = document.createElement('div');
-//     const p = document.createElement('p')
-//     //   title.forEach((item)=>{
-//     //    item = p.innerHTML;
-//     //  });
-//     p.textContent = bookLis;
-//     p.classList.add('cart');
-//     div.appendChild(p);
+const borrowCart = document.getElementById('Borrow');
+const bookLis = document.querySelector('.title').textContent;
+// delete books
+list.addEventListener('click', (e) => {
+  if (e.target.className == 'delete-bk') {
+    const li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
+  else if (e.target.className == 'borrow') {
+    const div = document.createElement('div');
+    const p = document.createElement('p')
+    //   title.forEach((item)=>{
+    //    item = p.innerHTML;
+    //  });
+    p.textContent = bookLis;
+    p.classList.add('cart');
+    div.appendChild(p);
     
-//     borrowCart.appendChild(div);
+    borrowCart.appendChild(div);
 
-//   }
-// });
+  }
+});
 
 
 // //Retrieving data from local storage
