@@ -598,7 +598,7 @@ p:nth-child(even).cart{
   flex-direction: row;
   width: 100%;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 .book-item {
   list-style-type: none;
