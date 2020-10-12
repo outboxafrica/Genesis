@@ -194,8 +194,8 @@
 }
 
 #intro {
-  position: absolute;
-  top: 100%;
+  position: relative;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(70, 68, 68, 0.6);
