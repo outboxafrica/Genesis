@@ -135,7 +135,7 @@ searchBar.addEventListener('keyup', (e) => {
 });   
 
 
-const addForm = forms['book-form'];
+const addForm = forms['add-book'];
 addForm.addEventListener('submit', function(e){
   e.preventDefault();
 
@@ -184,10 +184,10 @@ list.addEventListener('click', (e) => {
   else if (e.target.className == 'borrow') {
     const div = document.createElement('div');
     const p = document.createElement('p')
-    // bookLis.forEach((item)=>{
-    //   item.innerHTML = span.innerHTML;
-    // });
-    p.textContent = bookLis + "  ";
+    //   title.forEach((item)=>{
+    //    item = p.innerHTML;
+    //  });
+    p.textContent = bookLis;
     p.classList.add('cart');
     div.appendChild(p);
     
