@@ -211,10 +211,7 @@ list.addEventListener('click', (e) => {
   else if (e.target.className == 'borrow') {
     const div = document.createElement('div');
     const p = document.createElement('p')
-    //   title.forEach((item)=>{
-    //    item = p.innerHTML;
-    //  });
-    p.textContent = bookLis;
+    p.textContent = e.path[1].children[1].innerText
     p.classList.add('cart');
     div.appendChild(p);
     
