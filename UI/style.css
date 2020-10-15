@@ -555,7 +555,7 @@ p:nth-child(even).cart{
 
 .text {
   background-color: #4c93af;
-  color: white;
+  color: aliceblue;
   font-size: 20px;
   padding: 16px 32px;
   cursor: pointer;
@@ -567,11 +567,11 @@ p:nth-child(even).cart{
 }
 
 .delete {
-  background-color: rgb(96, 96, 248);
-  padding: 10px;
+  background-color: #3ba1b8;
+  padding: 8px;
   margin-bottom: 20px;
-  font-size: 18px;
-  color: #eee;
+  /* font-size: 18px; */
+  color: aliceblue;
   border-radius: 4px;
 }
 
